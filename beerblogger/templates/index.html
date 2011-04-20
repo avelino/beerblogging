@@ -1,27 +1,17 @@
-<!doctype html>
-<title>Hello from Flask</title>
+{% extends "layout/base.html" %}
 
-<table>
+{% block main_content %}
 
-	<tr>
-		<td>Titulo</td>
-		<td>Date</td>
-		<td>Link</td>				
-		<td>Autor</td>						
-		<td>Summary</td>								
-		<td>Tags</td>										
-		
-	</tr>
+	{% for entry in sorted_entries %}
 
-{% for entry in sorted_entries %}
-	<tr>
-		<td>{{ entry.title }}</td>
-		<td>{{ entry.date|datetimeformat }}</td>
-		<td>{{ entry.link }}</td>
-		<td>{{ entry.author.email }}</td>					
-		<td> asd </td>
-		<td>{{ entry.tags }}</td>
-	</tr>	
-{% endfor %}
+		<div class="entry-container">
 
-</table>
+			<a href="{{ entry.link }}"> {{ entry.title }} </a>
+			por {{ entry.author.email }} em {{ entry.date|datetimeformat }}
+			{{ entry.tags }}
+		</div> <!-- /entry-container -->
+
+	{% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset=utf-8>
+		<title>{% block head_title %}#beerblogging{% endblock %}g</title>
+	</head>
+
+	<body>
+
+		<header id="header">
+			{% include "layout/header.html" %}		
+		</header>
+		
+		<section id="content">
+			{% block main_content %}{% endblock %}
+		</section>
+		
+		<footer id="footer">
+			{% include "layout/footer.html" %}		
+		</footer>
+
+	</body>
+
+</html>
