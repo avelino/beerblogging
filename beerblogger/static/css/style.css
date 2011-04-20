@@ -1,0 +1,22 @@
+#content {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.entry-container {
+    width: 800px;
+    height: 140x;
+    background-color: grey;
+    margin: 10px;
+        display: inline-block;
+        padding: 10px;
+}
+.entry-left {
+   float: left;
+   width: 600px;
+}
+.entry-right img {
+    width: 100px;
+    float: right;
+}

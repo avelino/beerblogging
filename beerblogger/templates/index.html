@@ -1,17 +1,29 @@
 {% extends "layout/base.html" %}
-
 {% block main_content %}
 
-	{% for entry in sorted_entries %}
+<div id="entries-container">
 
-		<div class="entry-container">
 
-			<a href="{{ entry.link }}"> {{ entry.title }} </a>
-			por {{ entry.author.email }} em {{ entry.date|datetimeformat }}
-			{{ entry.tags }}
-		</div> <!-- /entry-container -->
+		{% for entry in sorted_entries %}
 
-	{% endfor %}
+			<div class="entry-container">
 
+				<div class="entry-left">
+					<a href="{{ entry.link }}"> {{ entry.title }} </a>
+					por {{ entry.author.email }} em {{ entry.date|datetimeformat }}
+					{{ entry.tags }}
+				</div> <!-- /entry-left -->
+
+				<div class="entry-right">
+					<a href="{{ entry.author.blog }}">
+						<img src="{{ entry.author.email | gravatar }}" />
+					</a>
+				</div>
+
+			</div> <!-- /entry-container -->
+
+		{% endfor %}
+
+</div> <!-- /#entries-container-->
 
 {% endblock %}

@@ -5,6 +5,10 @@ wsgiref==0.1.2
 
 feedparser==5.0.1
 
+peewee
+
+Flask-Gravatar
+
 ## Dev Enviroment only
 # bpython
 # yolk

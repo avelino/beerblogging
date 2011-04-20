@@ -19,6 +19,7 @@ class Member(object):
         self.blog = blog
         self.feed_url = feed_url
         self.twitter = twitter
+        self.eemail = str(email)
 
 class Members(Singleton):
 

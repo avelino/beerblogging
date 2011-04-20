@@ -2,10 +2,15 @@
 
 from flask import Flask, g, render_template
 
+from flaskext.gravatar import Gravatar
+
 import feedparser
 import urllib2
 from models import *
+
 app = Flask(__name__)
+
+gravatar = Gravatar(app, size=100, rating='x', default='retro', force_default=False, force_lower=False)
 
 @app.before_request
 def before_request():
