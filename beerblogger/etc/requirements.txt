@@ -3,6 +3,8 @@ Jinja2==2.5.5
 Werkzeug==0.6.2
 wsgiref==0.1.2
 
+feedparser==5.0.1
+
 ## Dev Enviroment only
 # bpython
 # yolk

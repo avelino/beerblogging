@@ -1,0 +1,27 @@
+<!doctype html>
+<title>Hello from Flask</title>
+
+<table>
+
+	<tr>
+		<td>Titulo</td>
+		<td>Date</td>
+		<td>Link</td>				
+		<td>Autor</td>						
+		<td>Summary</td>								
+		<td>Tags</td>										
+		
+	</tr>
+
+{% for entry in sorted_entries %}
+	<tr>
+		<td>{{ entry.title }}</td>
+		<td>{{ entry.date|datetimeformat }}</td>
+		<td>{{ entry.link }}</td>
+		<td>{{ entry.author.email }}</td>					
+		<td> asd </td>
+		<td>{{ entry.tags }}</td>
+	</tr>	
+{% endfor %}
+
+</table>

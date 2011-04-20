@@ -8,6 +8,8 @@ What the f*&% is #beerblogging ?
 It's a f*&%cking bet !
 
 
+
+
 Who are the Beerbloggers ?
 -----------------------------------
 
@@ -18,8 +20,11 @@ Who are the Beerbloggers ?
 + Felipe Arruda - http://www.arruda.blog.br/ - http://www.arruda.blog.br/?feed=rss2
 + Zeno Rocha - http://blog.zenorocha.com/ - http://feeds.feedburner.com/zenorocha
 
+If you are beerblogging, add yourself to members.yaml and make a pull request
 
 Let's talk about code ...
 -----------------------------------
 
-We are using `Flask <http://flask.pocoo.org/>`_, a web microframework for python.
++ `Python <http://python.org/>`_ programing language
++ `Flask <http://flask.pocoo.org/>`_ microframework for web
++ `Feed Parser <http://www.feedparser.org/>`_ library
