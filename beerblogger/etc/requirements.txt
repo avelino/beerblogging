@@ -9,6 +9,8 @@ peewee
 
 Flask-Gravatar
 
+PyYaml
+
 ## Dev Enviroment only
 # bpython
 # yolk

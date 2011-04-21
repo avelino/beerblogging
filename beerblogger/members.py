@@ -1,6 +1,7 @@
 #coding: utf-8
 
 import yaml
+DUMP_FILE = 'members.yaml'
 
 class Singleton(object):
     _instance = None
@@ -26,7 +27,7 @@ class Members(Singleton):
     def __init__(self):
         if not hasattr(self, 'objects'):            
             self.objects = []
-            self.dump_file = 'members.yaml'
+            self.dump_file = DUMP_FILE
             stream = file(self.dump_file, 'r')
             for m in yaml.load(stream):
                 mo = Member(m['name'], m['email'], m['blog'], m['feed_url'], m['twitter'])
