@@ -1,16 +1,9 @@
 #coding: utf-8
 
 import yaml
-DUMP_FILE = '/deploy/beerblogging/beerblogger/members.yaml'
+from util import Singleton
 
-class Singleton(object):
-    _instance = None
-
-    def __new__(cls, *args, **kwargs):
-        if not cls._instance:
-            cls._instance = object.__new__(cls, *args, **kwargs)
-
-        return cls._instance
+from . import app
 
 class Member(object):
 
@@ -27,8 +20,9 @@ class Members(Singleton):
     def __init__(self):
         if not hasattr(self, 'objects'):            
             self.objects = []
-            self.dump_file = DUMP_FILE
+            self.dump_file = app.config['DUMP_FILE']
             stream = file(self.dump_file, 'r')
+
             for m in yaml.load(stream):
                 mo = Member(m['name'], m['email'], m['blog'], m['feed_url'], m['twitter'])
                 self.objects.append(mo)

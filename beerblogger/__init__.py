@@ -4,13 +4,16 @@ from flask import Flask, g, render_template
 
 from flaskext.gravatar import Gravatar
 
-import feedparser
-import urllib2
-from models import *
-
 app = Flask(__name__)
+app.config.from_envvar('BEERBLOGGING_SETTINGS')
+# export BEERBLOGGING_SETTINGS='/Users/victor/code/public/beerblogging/beerblogger/settings_dev.py'
+# export BEERBLOGGING_SETTINGS='/Users/victor/code/public/beerblogging/beerblogger/settings_dev.py'
 
 gravatar = Gravatar(app, size=100, rating='x', default='retro', force_default=False, force_lower=False)
+
+from models import *
+
+from views import *
 
 @app.before_request
 def before_request():
@@ -22,6 +25,7 @@ def after_request(response):
     g.db.close()
     return response
 
+import feedparser
 from time import mktime
 from datetime import datetime    
 
@@ -45,17 +49,3 @@ def refresh_entries():
                 new_entry.save()
     
     database.close()
-    
-
-
-@app.route('/')
-def index():
-    #url = urllib2.urlopen(BEERBLOGGERS[u'Victor Fontes']).geturl()
-
-    entries = BlogEntry.select().order_by(('date', 'desc'), ).paginate(0, 20)
-
-    return render_template('index.html', sorted_entries=entries)
-
-@app.template_filter('datetimeformat')
-def datetimeformat(value, format='%d/%m/%Y   [%H:%M]'):
-    return value.strftime(format)
