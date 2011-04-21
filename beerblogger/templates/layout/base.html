@@ -14,8 +14,16 @@
 
 		<header id="header">
 			{% include "layout/header.html" %}		
+
+				<ul>
+					<li><a href="/">POSTS</a> - </li>
+					<li><a href="/sobre/">SOBRE</a> - </li>				
+					<li><a href="/contato/">CONTATO</a></li>								
+				</ul>
+			
 		</header>
-		
+
+
 		<section id="content">
 			{% block main_content %}{% endblock %}
 		</section>

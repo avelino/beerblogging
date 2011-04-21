@@ -7,7 +7,7 @@ from flaskext.gravatar import Gravatar
 app = Flask(__name__)
 app.config.from_envvar('BEERBLOGGING_SETTINGS')
 # export BEERBLOGGING_SETTINGS='/Users/victor/code/public/beerblogging/beerblogger/settings_dev.py'
-# export BEERBLOGGING_SETTINGS='/Users/victor/code/public/beerblogging/beerblogger/settings_dev.py'
+# echo 'export BEERBLOGGING_SETTINGS=/deploy/beerblogging/beerblogger/settings_prod.py' >> /etc/apache2/envvars
 
 gravatar = Gravatar(app, size=100, rating='x', default='retro', force_default=False, force_lower=False)
 
