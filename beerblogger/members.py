@@ -1,7 +1,7 @@
 #coding: utf-8
 
 import yaml
-DUMP_FILE = 'members.yaml'
+DUMP_FILE = '/deploy/beerblogging/beerblogger/members.yaml'
 
 class Singleton(object):
     _instance = None

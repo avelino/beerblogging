@@ -1,6 +1,6 @@
 #coding: utf-8
 import peewee
-DATABASE_NAME = 'db.sqlite'
+DATABASE_NAME = '/deploy/beerblogging/beerblogger/db.sqlite'
 database = peewee.Database(peewee.SqliteAdapter(), DATABASE_NAME)
 from members import *
 
