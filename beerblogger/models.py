@@ -27,8 +27,3 @@ class BlogEntry(peewee.Model):
     @property
     def author(self):
         return Members().by_email(self.author_email)
-
-    
-def create_tables():
-    database.connect()
-    BlogEntry.create_table()
