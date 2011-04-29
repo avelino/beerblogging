@@ -1,10 +1,13 @@
+#!/usr/bin/env python
 #coding: utf-8
 
 import sys
 from beerblogger import *
 
-TASKS = ['localserver', 'externalserver', 'update_entries']
+
+TASKS = ['localserver', 'externalserver', 'update_entries', 'create_db']
 USAGE_TEXT = u'\nUsage: \n./manager.py command_name (arguments)\n'
+
 
 def help(*args):
     print USAGE_TEXT
@@ -12,16 +15,23 @@ def help(*args):
     for task_name in TASKS:
         task_func = globals()[task_name]
         print '- %s: \t %s' % (task_name, task_func.__doc__)
-        
-        
+
 
 def localserver(*args):
     'runs dev server on "localhost:5000"'
     app.run()
 
+
 def externalserver(*args):
     'runs dev server that answers to request from other hosts'
     app.run(host='0.0.0.0')
+
+
+def create_db(*args):
+    'creates the database'
+    database.connect()
+    BlogEntry.create_table()
+
 
 def update_entries(*args):
     'Updates database with new posts'
@@ -46,6 +56,7 @@ def update_entries(*args):
                 new_entry.save()
     
     database.close()
+ 
     
 if __name__ == '__main__':
     'Calls the method with the given name with the other args (if any)'
