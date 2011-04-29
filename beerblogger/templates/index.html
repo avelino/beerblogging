@@ -9,9 +9,12 @@
 			<div class="entry-container">
 
 				<div class="entry-left">
-					<a href="{{ entry.link }}"> {{ entry.title }} </a>
-					por {{ entry.author.email }} em {{ entry.date|datetimeformat }}
-					{{ entry.tags }}
+					
+					<a class="entry-title"href="{{ entry.link }}"> {{ entry.title }} </a> 
+					<br />
+					<br />
+					por <a href="{{ entry.link }}">{{ entry.author.name }}</a> 
+					em {{ entry.date|dateformat }} às {{ entry.date|timeformat }} <br />
 				</div> <!-- /entry-left -->
 
 				<div class="entry-right">

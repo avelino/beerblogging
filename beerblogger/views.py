@@ -11,8 +11,12 @@ def index():
     entries = BlogEntry.select().order_by(('date', 'desc'), ).paginate(0, 20)
     return render_template('index.html', sorted_entries=entries)
 
-@app.template_filter('datetimeformat')
-def datetimeformat(value, format='%d/%m/%Y   [%H:%M]'):
+@app.template_filter('dateformat')
+def dateformat(value, format=u'%d/%m/%Y'):
+    return value.strftime(format)
+
+@app.template_filter('timeformat')
+def timeformat(value, format=u'%H:%M'):
     return value.strftime(format)
 
 

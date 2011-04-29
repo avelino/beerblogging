@@ -15,7 +15,19 @@
 
 .entry-left {
    float: left;
-   width: 600px;
+   width: 740px;
+}
+
+a.entry-title {
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+	font-size: 36px;
+	line-height: 40px;
+	letter-spacing: -1px;
+	color: white;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+    font-weight: 100;
+    text-decoration: none;
 }
 .entry-right img {
     width: 100px;
