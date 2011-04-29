@@ -40,21 +40,15 @@ def feed_atom():
     return make_feed().format_atom_string()
     
 def make_feed():
-    FEED_TITLE = "BeerBlogging"
-    FEED_LINK = "http://www.beerblogging.net"
-    FEED_AUTHOR = "BeerBloggin Team"
-    FEED_DESC = "Beerblogging Feed"
-    FEED_ITEMS = 20
 
     feed = Feed()
+    
+    feed.feed["title"] = app.config['FEED_TITLE']
+    feed.feed["link"] = app.config['FEED_LINK']
+    feed.feed["author"] = app.config['FEED_AUTHOR']
+    feed.feed["description"] = app.config['FEED_DESC']
 
-    # Set the feed/channel level properties
-    feed.feed["title"] = FEED_TITLE
-    feed.feed["link"] = FEED_LINK
-    feed.feed["author"] = FEED_AUTHOR
-    feed.feed["description"] = FEED_DESC
-
-    entries = BlogEntry.select().order_by(('date', 'desc'), ).paginate(0, FEED_ITEMS)
+    entries = BlogEntry.select().order_by(('date', 'desc'), ).paginate(0, app.config['FEED_ITEMS'])
 
     for post in entries:
         item = {}
@@ -68,4 +62,4 @@ def make_feed():
 
         feed.items.append(item)
 
-        return feed
+    return feed
