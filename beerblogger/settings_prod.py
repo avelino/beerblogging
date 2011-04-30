@@ -1,4 +1,4 @@
-from settings_common import *
+from beerblogger.settings_common import *
 
 DEBUG = False
 DATABASE_NAME = '/deploy/beerblogging/beerblogger/db.sqlite'
