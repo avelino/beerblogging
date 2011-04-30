@@ -5,11 +5,12 @@ wsgiref==0.1.2
 
 feedparser==5.0.1
 
-peewee
+peewee==0.3.2
 
-Flask-Gravatar
+Flask-Gravatar==0.2.2
+Flask-FlatPages==0.1
 
-PyYaml
+PyYAML==3.09
 
 ## Dev Enviroment only
 # bpython

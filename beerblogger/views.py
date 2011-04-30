@@ -3,7 +3,7 @@
 from flask import Flask, request, redirect, url_for, session, flash, g, \
      render_template, Module
 
-from . import app
+from . import app, pages
 from models import BlogEntry
 from feedformatter import Feed
 
@@ -29,6 +29,13 @@ def page_not_found(e):
 def index():
     entries = BlogEntry.select().order_by(('date', 'desc'), ).paginate(0, 20)
     return render_template('index.html', sorted_entries=entries)
+
+@app.route('/<path:path>/')
+def page(path):
+    page = pages.get_or_404(path)
+    template = page.meta.get('template', 'flatpage.html')
+    return render_template(template, page=page)
+
 
 @app.route('/feed/rss/')
 def feed_rss2():
