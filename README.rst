@@ -19,6 +19,7 @@ Who are the Beerbloggers ?
 + Tiago Veloso - http://tiagoveloso.com/ - http://tiagoveloso.com/feed/
 + Felipe Arruda - http://www.arruda.blog.br/ - http://www.arruda.blog.br/?feed=rss2
 + Zeno Rocha - http://blog.zenorocha.com/ - http://feeds.feedburner.com/zenorocha
++ Thiago Belem - http://blog.thiagobelem.net/ - http://blog.thiagobelem.net/feed/
 
 If you are beerblogging, add yourself to members.yaml and make a pull request
 

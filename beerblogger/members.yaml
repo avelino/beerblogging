@@ -39,3 +39,10 @@
   feed_url: http://feeds.feedburner.com/zenorocha
   twitter: zenorocha
   id: 6
+
+- name: Thiago Belem
+  email: contato@thiagobelem.net
+  blog: http://blog.thiagobelem.net/
+  feed_url: http://blog.thiagobelem.net/feed/
+  twitter: TiuTalk
+  id: 7
