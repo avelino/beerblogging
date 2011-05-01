@@ -39,7 +39,9 @@ def page(path):
 
 @app.route('/feed/rss/')
 def feed_rss2():
-    return make_feed().format_rss2_string()
+    ENCODING_TAG = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    feed_str = make_feed().format_rss2_string()
+    return ENCODING_TAG + feed_str
 
 
 @app.route('/feed/atom/')
