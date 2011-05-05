@@ -5,6 +5,8 @@ wsgiref==0.1.2
 
 feedparser==5.0.1
 
+feedformatter==0.4
+
 peewee==0.3.2
 
 Flask-Gravatar==0.2.2
