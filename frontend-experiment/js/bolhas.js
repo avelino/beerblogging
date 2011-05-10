@@ -1,7 +1,7 @@
 (function($) {
         
     $(function() {
-        $('<div id="beer"><\/div>').appendTo('body').bolha();
+        $('<div id="beer"></div>').appendTo('#container').bolha();
         
     });
     

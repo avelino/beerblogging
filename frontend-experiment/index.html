@@ -19,8 +19,8 @@
 	<link rel="shortcut icon" href="favicon.ico"> 
 	
 	<!-- Fonts -->
-	<link  href="http://fonts.googleapis.com/css?family=Amaranth:regular,400italic,700,700italic" rel="stylesheet" type="text/css" >
-	<link  href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet" type="text/css" >
+	<link href="http://fonts.googleapis.com/css?family=Amaranth:regular,400italic,700,700italic" rel="stylesheet" type="text/css" >
+	<link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet" type="text/css" >
 	
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/reset.css" />
@@ -31,16 +31,19 @@
 
 </head>
 
-<body class="fundo">
-
+<body class="fundo yanone">
+	
+	<a href="http://github.com/victorfontes/beerblogging/" id="github"><img src="https://d3nwyuy0nl342s.cloudfront.net/img/71eeaab9d563c2b3c590319b398dd35683265e85/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub"></a>
+	
+	<header>
+		<h1 class="amaranth"><a href="#">#beerblogging</a></h1>
+		<nav id="wtf"><a href="#">WTF?</a></nav>
+		<section id="rss"><a href="#">RSS</a> | <a href="#">Atom</a></section>
+	</header>
+	
+	<canvas id="ondas"></canvas>
+	
 	<div id="container">
-	
-			<h1><a href="#">#beerblogging</a></h1>
-			<canvas id="ondas"></canvas>
-		
-	</div>
-	
-	<div id="center">
 		
 		<article class="box">
 			
@@ -51,7 +54,7 @@
 			
 			<hgroup class="conteudo">
          		<h2 class="titulo"><a href="#">Ponteiros – Para tirar dúvidas</a></h2>
-            	<h6 class="autor"><a href="#">por Felipe Arruda</a></h6>
+            	<h3 class="autor"><a href="#">por Felipe Arruda</a></h3>
         	</hgroup>
         	
         	<section class="avatar">
@@ -69,7 +72,7 @@
 			
 			<hgroup class="conteudo">
          		<h2 class="titulo"><a href="#">Relato do Geeks On A Plane #HoraExtra </a></h2>
-            	<h6 class="autor"><a href="#">por Thiago Belem</a></h6>
+            	<h3 class="autor"><a href="#">por Thiago Belem</a></h3>
         	</hgroup>
         	
         	<section class="avatar">
@@ -87,7 +90,7 @@
 			
 			<hgroup class="conteudo">
          		<h2 class="titulo"><a href="#">Dicas para calouros de Sistemas de Informação – Parte 1 </a></h2>
-            	<h6 class="autor"><a href="#">por Pedro Marins</a></h6>
+            	<h3 class="autor"><a href="#">por Pedro Marins</a></h3>
         	</hgroup>
         	
         	<section class="avatar">
@@ -105,7 +108,7 @@
 			
 			<hgroup class="conteudo">
          		<h2 class="titulo"><a href="#">HTML5 - Local Storage  </a></h2>
-            	<h6 class="autor"><a href="#">por Zeno Rocha</a></h6>
+            	<h3 class="autor"><a href="#">por Zeno Rocha</a></h3>
         	</hgroup>
         	
         	<section class="avatar">
@@ -123,7 +126,7 @@
 			
 			<hgroup class="conteudo">
          		<h2 class="titulo"><a href="#">Unreal Engine Mobile </a></h2>
-            	<h6 class="autor"><a href="#">por Felipe Arruda</a></h6>
+            	<h3 class="autor"><a href="#">por Felipe Arruda</a></h3>
         	</hgroup>
         	
         	<section class="avatar">
@@ -141,7 +144,7 @@
 			
 			<hgroup class="conteudo">
          		<h2 class="titulo"><a href="#">Relato | V OpenSpaceRio </a></h2>
-            	<h6 class="autor"><a href="#">por Pedro Marins</a></h6>
+            	<h3 class="autor"><a href="#">por Pedro Marins</a></h3>
         	</hgroup>
         	
         	<section class="avatar">
@@ -150,7 +153,7 @@
 		
 		</article>
 		
-	</div>
+	</div><!-- fim #container -->
 
 	<!-- jQuery Fallback -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>

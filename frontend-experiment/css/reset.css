@@ -62,13 +62,14 @@ input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
 
-::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
-::selection { background:#FF5E99; color:#fff; text-shadow: none; }
+::-moz-selection{ olor:#E0BC20; text-shadow: none; }
+::selection { color:#E0BC20; text-shadow: none; }
 a:link { -webkit-tap-highlight-color: #FF5E99; }
 button {  width: auto; overflow: visible; }
 .ie7 img { -ms-interpolation-mode: bicubic; }
 
 body, select, input, textarea { color: #444; }
 h1, h2, h3, h4, h5, h6 { font-weight: bold; }
-a, a:active, a:visited { color: #607890; }
-a:hover { color: #036; }
+a { text-decoration: none; }
+/*a, a:active, a:visited { color: #607890; }
+a:hover { color: #036; }*/
