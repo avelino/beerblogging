@@ -1,0 +1,15 @@
+humanstxt.org - Share this idea =D
+
+/* TEAM */
+
+	BeerBloggers: Victor Fontes, Pedro Marins, Arlindo Pereira, Luiz Carlos, Thiago Belem, Tiago Veloso, Felipe Arruda, Zeno Rocha
+	Site: beerblogging.org
+	Location: Rio de Janeiro
+
+/* SITE */
+	
+	Language: Python
+	Framework: Flask	
+	Standards: HTML5, CSS3
+	Components: Modernizr, jQuery
+	Software: Aptana
