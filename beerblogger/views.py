@@ -15,11 +15,8 @@ def dateformat(value, format=u'%d/%m/%Y'):
 
 @app.template_filter('shortmonth')
 def shortmonth(value):
-    #locale.setlocale(locale.LC_ALL, "pt_BR")
-    #locale.setlocale(locale.LC_ALL, '')
     locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
     return value.strftime('%B')[:3].upper()
-
 
 ''' Http Errors '''
 @app.errorhandler(404)
