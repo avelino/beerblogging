@@ -14,13 +14,12 @@
 			
 			<hgroup class="conteudo">
          		<h2 class="titulo"><a href="{{ entry.link }}">{{ entry.title }}</a></h2>
-				{# TODO: link to author's blog #}
 				{# TODO: translate 'por' #}
-            	<h3 class="autor"><a href="{{ entry.link }}">por {{ entry.author.name }}</a></h3> 
+            	<h3 class="autor"><a href="{{ entry.author.blog }}">por {{ entry.author.name }}</a></h3> 
         	</hgroup>
         	
         	<section class="avatar">
-        		<a href="{{ entry.link }}"><img src="{{ entry.author.email | gravatar }}" 
+        		<a href="{{ entry.author.blog }}"><img src="{{ entry.author.email | gravatar }}" 
 					alt="Picture of {{ entry.author.name }}" /></a>
         	</section>
 		
