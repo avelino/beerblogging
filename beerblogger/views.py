@@ -6,16 +6,17 @@ from flask import Flask, request, redirect, url_for, session, flash, g, \
 from . import app, pages
 from models import BlogEntry
 from feedformatter import Feed
+import locale
 
 ''' Template Filters '''
 @app.template_filter('dateformat')
 def dateformat(value, format=u'%d/%m/%Y'):
     return value.strftime(format)
 
-
-@app.template_filter('timeformat')
-def timeformat(value, format=u'%H:%M'):
-    return value.strftime(format)
+@app.template_filter('shortmonth')
+def shortmonth(value):
+    locale.setlocale(locale.LC_ALL, "pt_BR")
+    return value.strftime('%B')[:3].upper()
 
 
 ''' Http Errors '''

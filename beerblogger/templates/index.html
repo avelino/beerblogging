@@ -8,8 +8,8 @@
 		<article class="box">
 			
 			<aside class="data">
-        		<span class="mes">{{ entry.date.0 }}</span>
-        		<span class="dia">{{ entry.date.2 }}</span>
+        		<span class="mes">{{ entry.date|shortmonth }}</span>
+        		<span class="dia">{{ entry.date.strftime('%d') }}</span>
      		</aside>
 			
 			<hgroup class="conteudo">
