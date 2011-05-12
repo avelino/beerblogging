@@ -1,32 +1,32 @@
 {% extends "layout/base.html" %}
+
 {% block main_content %}
 
-<div id="entries-container">
+	<div id="container">
+	{% for entry in sorted_entries %}
 
+		<article class="box">
+			
+			<aside class="data">
+        		<span class="mes">{{ entry.date.0 }}</span>
+        		<span class="dia">{{ entry.date.2 }}</span>
+     		</aside>
+			
+			<hgroup class="conteudo">
+         		<h2 class="titulo"><a href="{{ entry.link }}">{{ entry.title }}</a></h2>
+				{# TODO: link to author's blog #}
+				{# TODO: translate 'por' #}
+            	<h3 class="autor"><a href="{{ entry.link }}">por {{ entry.author.name }}</a></h3> 
+        	</hgroup>
+        	
+        	<section class="avatar">
+        		<a href="{{ entry.link }}"><img src="{{ entry.author.email | gravatar }}" 
+					alt="Picture of {{ entry.author.name }}" /></a>
+        	</section>
+		
+		</article>
 
-		{% for entry in sorted_entries %}
-
-			<div class="entry-container">
-
-				<div class="entry-left">
-					
-					<a class="entry-title"href="{{ entry.link }}"> {{ entry.title }} </a> 
-					<br />
-					<br />
-					por <a href="{{ entry.link }}">{{ entry.author.name }}</a> 
-					em {{ entry.date|dateformat }} às {{ entry.date|timeformat }} <br />
-				</div> <!-- /entry-left -->
-
-				<div class="entry-right">
-					<a href="{{ entry.author.blog }}">
-						<img src="{{ entry.author.email | gravatar }}" />
-					</a>
-				</div>
-
-			</div> <!-- /entry-container -->
-
-		{% endfor %}
-
-</div> <!-- /#entries-container-->
+	{% endfor %}		
+	</div><!-- fim #container -->
 
 {% endblock %}
