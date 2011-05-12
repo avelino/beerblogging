@@ -37,14 +37,12 @@
 	
 	<header>
 		<h1 class="amaranth"><a href="/">#beerblogging</a></h1>
-		{# TODO: about link with url_for #}
-		<nav id="wtf"><a href="/">WTF?</a></nav>
-		{# TODO: extract link to feedburner #}
-		<section id="rss"><a href="#">RSS</a> | <a href="#">Atom</a></section>
+		<nav id="wtf"><a href="/wtf/">WTF?</a></nav>
+		{# TODO: Atom Link #}
+		<section id="rss"><a href="http://feeds.feedburner.com/beerblogging">RSS</a> | <a href="http://feeds.feedburner.com/beerblogging">Atom</a></section>
 	</header>
 	
 	<canvas id="ondas"></canvas>
-
 
 	{% block main_content %}
 	
