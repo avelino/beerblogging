@@ -5,6 +5,8 @@ from flask import Flask, g, render_template
 from flaskext.gravatar import Gravatar
 from flaskext.flatpages import FlatPages
 
+import locale
+locale.setlocale(locale.LC_ALL, '')
 
 app = Flask(__name__)
 app.config.from_envvar('BEERBLOGGING_SETTINGS')
