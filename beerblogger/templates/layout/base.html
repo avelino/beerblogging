@@ -38,8 +38,7 @@
 	<header>
 		<h1 class="amaranth"><a href="/">#beerblogging</a></h1>
 		<nav id="wtf"><a href="/wtf/">WTF?</a></nav>
-		{# TODO: Atom Link #}
-		<section id="rss"><a href="http://feeds.feedburner.com/beerblogging">RSS</a> | <a href="http://feeds.feedburner.com/beerblogging">Atom</a></section>
+		<section id="rss"><a href="http://feeds.feedburner.com/beerblogging">RSS</a> | <a href="{{ url_for('feed_atom') }}">Atom</a></section>
 	</header>
 	
 	<canvas id="ondas"></canvas>
