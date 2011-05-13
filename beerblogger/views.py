@@ -64,12 +64,6 @@ def page(path):
     template = page.meta.get('template', 'flatpage.html')
     return render_template(template, page=page)
 
-
-@app.route('/wtf/')
-def wtf():
-    return render_template('wtf.html')
-
-
 @app.route('/feed/rss/')
 def feed_rss2():
     ENCODING_TAG = '<?xml version="1.0" encoding="UTF-8"?>\n'
