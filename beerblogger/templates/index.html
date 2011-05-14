@@ -4,7 +4,7 @@
 
 	<div id="container">
 
-		  <div class=pagination>
+		  <div id="paginacao">
 		  {% for page in pagination.iter_pages() %}
 		    {% if page %}
 		      {% if page != pagination.page %}
@@ -13,11 +13,11 @@
 			<strong>{{ page }}</strong>
 		      {% endif %}
 		    {% else %}
-		      <span class=ellipsis>…</span>
+		      <span id=pontos>…</span>
 		    {% endif %}
 		  {% endfor %}
 		  {% if pagination.has_next %}
-		    <a href="/pagina/{{pagination.page + 1}}">Next &raquo;</a>
+		    <a href="/pagina/{{pagination.page + 1}}"> - Pr&oacute;xima &raquo;</a>
 		  {% endif %}
 		  </div>
 

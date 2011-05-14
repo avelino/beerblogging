@@ -301,3 +301,27 @@ h5 {
 	padding: 10px;
 	color: #999;
 }
+
+/* --- Pagination --- */
+
+#paginacao {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#paginacao a {
+    color: #fff;
+}
+
+#paginacao a:hover {
+    color: #333;
+}
+
+#paginacao strong {
+    color: #666;
+}
+
+#pontos {
+	color: #666;
+}
