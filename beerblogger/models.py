@@ -24,6 +24,15 @@ class BlogEntry(peewee.Model):
     class Meta:
         database = database
 
+
+    @classmethod
+    def count(cls):
+        return cls.select().count()
+
+    @classmethod
+    def get_page(cls, per_page, page ):
+        return cls.select().order_by(('date', 'desc'),).paginate(page, per_page)
+        
     @property
     def author(self):
         return Members().by_email(self.author_email)
