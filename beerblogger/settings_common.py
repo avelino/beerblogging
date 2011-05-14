@@ -1,5 +1,8 @@
 #coding: utf-8
 
+## BLOG ENTRIES
+POSTS_PER_PAGE = 10
+
 ## SYNDICATION
 FEED_TITLE = "BeerBlogging"
 FEED_LINK = "http://www.beerblogging.org"
@@ -11,4 +14,3 @@ FEED_ITEMS = 20
 ## FLATPAGES
 FLATPAGES_ROOT = 'flatpages'
 FLATPAGES_EXTENSION = '.yaml'
-    

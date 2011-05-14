@@ -27,14 +27,12 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 
-BEERS_PER_PAGE = 10
-
 ''' Views '''
 @app.route('/', defaults={'page': 1})
 @app.route('/pagina/<int:page>')
 def index(page):
     total_beers = count_all_beers()
-    beers = get_beers_for_page(page, BEERS_PER_PAGE,total_beers)
+    beers = get_beers_for_page(page, app.config['POSTS_PER_PAGE'], total_beers)
     if not beers:
         abort(404)
 
