@@ -149,7 +149,7 @@ function drawShape(){
   ctx.fill();
   
   counter++;
-  if ( counter == dur) animationActive = false;
+  if ( counter == (dur + 50)) animationActive = false;
   if (counter >= (dur*2)) stopAni();          
 
 } 

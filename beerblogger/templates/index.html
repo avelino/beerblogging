@@ -4,23 +4,6 @@
 
 	<div id="container">
 
-		  <div class=pagination>
-		  {% for page in pagination.iter_pages() %}
-		    {% if page %}
-		      {% if page != pagination.page %}
-			<a href="/?page={{ page }}">{{ page }}</a>
-		      {% else %}
-			<strong>{{ page }}</strong>
-		      {% endif %}
-		    {% else %}
-		      <span class=ellipsis>…</span>
-		    {% endif %}
-		  {% endfor %}
-		  {% if pagination.has_next %}
-		    <a href="/?page={{pagination.page + 1}}">Next &raquo;</a>
-		  {% endif %}
-		  </div>
-
 	{% for entry in sorted_entries %}
 		<article class="box">
 			
@@ -42,7 +25,26 @@
 		
 		</article>
 
-	{% endfor %}		
+	{% endfor %}
+	
+	<div id="paginacao">
+		{% for page in pagination.iter_pages() %}
+			{% if page %}
+				{% if page != pagination.page %}
+					<a href="/?page={{ page }}">{{ page }}</a>
+				{% else %}
+					<strong>{{ page }}</strong>
+		      	{% endif %}
+		    {% else %}
+		    	<span id=pontos>…</span>
+		    {% endif %}
+		{% endfor %}
+
+		{% if pagination.has_next %}
+			<a href="/?page={{pagination.page + 1}}"> - Pr&oacute;xima &raquo;</a>
+		{% endif %}
+	</div>
+		
 	</div><!-- fim #container -->
 
 {% endblock %}

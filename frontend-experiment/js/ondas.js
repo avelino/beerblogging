@@ -150,6 +150,6 @@ function drawShape(){
   
   counter++;
   if ( counter == dur) animationActive = false;
-  if (counter >= (dur*2)) stopAni();          
+  if (counter >= (dur*z)) stopAni();          
 
 } 
