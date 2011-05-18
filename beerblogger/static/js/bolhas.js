@@ -33,8 +33,6 @@
                 var x = parseInt(Math.random() * window.innerWidth);
                 var y = parseInt(Math.random() * 3000);
                 
-                console.log (y);
-                
                 $("<div/>").css({left:x+'px',top:y+'px'}).addClass('b1').addClass('bubble').appendTo($c);
                 
             }
