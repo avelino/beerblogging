@@ -1,10 +1,16 @@
 {% extends "layout/base.html" %}
 
-{% block head_title %}
-	{{page.meta.title}}
-{% endblock %}
-
+{% block head_title %} {{page.meta.title}} {% endblock %}
 
 {% block main_content %}
-	{{page.html|safe}}
+    <div id="container" class="container-wtf">
+
+    	<article id="conteudo-wtf">
+			{{page.html|safe}}
+		</article>
+	
+</div><!-- fim #container -->
+
+
+	
 {% endblock %}

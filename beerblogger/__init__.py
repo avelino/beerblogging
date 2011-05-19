@@ -5,7 +5,6 @@ from flask import Flask, g, render_template
 from flaskext.gravatar import Gravatar
 from flaskext.flatpages import FlatPages
 
-
 app = Flask(__name__)
 app.config.from_envvar('BEERBLOGGING_SETTINGS')
 

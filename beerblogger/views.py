@@ -4,19 +4,22 @@ from flask import Flask, request, redirect, url_for, session, flash, g, \
      render_template, Module
 
 from . import app, pages
+from pagination import Pagination  
+
 from models import BlogEntry
 from feedformatter import Feed
+import locale
+ 	
 
 ''' Template Filters '''
 @app.template_filter('dateformat')
 def dateformat(value, format=u'%d/%m/%Y'):
     return value.strftime(format)
 
-
-@app.template_filter('timeformat')
-def timeformat(value, format=u'%H:%M'):
-    return value.strftime(format)
-
+@app.template_filter('shortmonth')
+def shortmonth(value):
+    locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+    return value.strftime('%B')[:3].upper()
 
 ''' Http Errors '''
 @app.errorhandler(404)
@@ -27,15 +30,19 @@ def page_not_found(e):
 ''' Views '''
 @app.route('/')
 def index():
-    entries = BlogEntry.select().order_by(('date', 'desc'), ).paginate(0, 20)
-    return render_template('index.html', sorted_entries=entries)
+    BEERS_PER_PAGE = app.config['POSTS_PER_PAGE']
+    page = int(request.args.get('page', '1'))
+    
+    beers = BlogEntry.select().order_by(('date', 'desc'), ).paginate(page, BEERS_PER_PAGE)
+    pagination = Pagination(page, BEERS_PER_PAGE, BlogEntry.count())
+
+    return render_template('index.html',sorted_entries=beers, pagination=pagination)
 
 @app.route('/<path:path>/')
-def page(path):
+def flatpage(path):
     page = pages.get_or_404(path)
     template = page.meta.get('template', 'flatpage.html')
     return render_template(template, page=page)
-
 
 @app.route('/feed/rss/')
 def feed_rss2():
