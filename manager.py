@@ -45,10 +45,12 @@ def update_entries(*args):
 
         for entry in feed['items']:
             if entry['id'] not in member_entries_ids:
-                if datetime.fromtimestamp(mktime(entry['updated_parsed'])) > DATE_BET_STARTED:
+                #if datetime.fromtimestamp(mktime(entry['updated_parsed'])) > DATE_BET_STARTED:
+                if datetime.fromtimestamp(mktime(entry['updated_parsed'])).date() >= member.date_started:
                     new_entry = BlogEntry()
                     new_entry.title = entry['title']
-                    new_entry.author_email = member.email
+                    new_entry.author_email = member.email                    
+                    new_entry.betting_group = member.group
                     new_entry.summary = entry['summary']
                     #new_entry.content = entry['content']
                     new_entry.link = entry['link']

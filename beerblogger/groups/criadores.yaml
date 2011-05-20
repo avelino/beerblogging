@@ -1,0 +1,69 @@
+- name: Victor Fontes
+  email: contato@victorfontes.com
+  blog: http://victorfontes.com/
+  feed_url: http://victorfontes.com/feed/
+  group: criadores
+  post_meta: 3
+  date_started: 2011-03-21  
+  twitter: victorfontes
+  id: 1
+
+- name: Pedro Marins
+  email: contato@pedromarins.com
+  blog: http://pedromarins.com/
+  feed_url: http://pedromarins.com/feed/
+  group: criadores
+  post_meta: 2
+  date_started: 2011-03-21    
+  twitter: pedromarins
+  id: 2
+
+- name: Arlindo Pereira
+  email: nighto@nighto.net
+  blog: http://nighto.net/
+  feed_url: http://nighto.net/feed/
+  group: criadores
+  post_meta: 1  
+  date_started: 2011-03-21  
+  twitter: nighto
+  id: 3
+
+- name: Tiago Veloso
+  email: contato@tiagoveloso.com
+  blog: http://tiagoveloso.com/
+  feed_url: http://tiagoveloso.com/feed/
+  group: criadores
+  post_meta: 1  
+  date_started: 2011-03-21  
+  twitter: tiagoveloso
+  id: 4
+ 
+- name: Felipe Arruda
+  email: arruda@uniriotec.com
+  blog: http://www.arruda.blog.br/
+  feed_url: http://www.arruda.blog.br/?feed=rss2
+  group: criadores
+  post_meta: 1  
+  date_started: 2011-03-21
+  twitter: 4rrud4
+  id: 5
+
+- name: Zeno Rocha
+  email: contato@zenorocha.com
+  blog: http://blog.zenorocha.com/
+  feed_url: http://feeds.feedburner.com/zenorocha
+  group: criadores
+  post_meta: 2  
+  date_started: 2011-03-21  
+  twitter: zenorocha
+  id: 6
+
+- name: Thiago Belem
+  email: contato@thiagobelem.net
+  blog: http://blog.thiagobelem.net/
+  feed_url: http://blog.thiagobelem.net/feed/
+  group: criadores
+  post_meta: 2  
+  date_started: 2011-03-21  
+  twitter: TiuTalk
+  id: 7
