@@ -1,3 +1,14 @@
+
+#pizza {
+	position: absolute; 
+    width: 100%;
+    height: 100%;
+	top: 0; 
+	right: 0; 
+	border: 0;
+}
+
+
 /* --- Fontes --- */
 
 .yanone {
@@ -92,6 +103,10 @@ header {
 
 #container {
 	width: 870px;
+	margin: 0 auto;
+}
+#container-cookies {
+	width:100%;
 	margin: 0 auto;
 }
 
@@ -213,6 +228,23 @@ header {
 }
 
 /* --- Bolhas --- */
+
+.cookie {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    background: #fff;
+    border-radius: 10px 10px 10px 10px;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+}
 
 #beer {
 	overflow: hidden;
