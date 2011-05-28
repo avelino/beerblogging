@@ -14,6 +14,8 @@ class BlogEntry(peewee.Model):
 
     author_email = peewee.CharField()
 
+    betting_group =     peewee.CharField()
+    
     summary =   peewee.TextField() 
     tags =      peewee.CharField()
     content =   peewee.TextField()

@@ -32,10 +32,10 @@ Let's talk about code ...
 
 Let's install the f*&%cking thing
 -----------------------------------
-+To install it, first you need to clone this repository
-+Then install all requirements, using 'beerblogging/beerblogger/etc/requirements.txt'
-+export BEERBLOGGING_SETTINGS to point at your 'beerblogging/beerblogger/setting_dev.py'
-+Run "manage.py create_db" to create the DB
-+Run "manage.py update_entries" to populate the DB
-+Run "manage.py localserver" to run server in localhost:5000
++ To install it, first you need to clone this repository
++ Then install all requirements, using 'beerblogging/beerblogger/etc/requirements.txt'
++ export BEERBLOGGING_SETTINGS to point at your 'beerblogging/beerblogger/setting_dev.py'
++ Run "manage.py create_db" to create the DB
++ Run "manage.py update_entries" to populate the DB
++ Run "manage.py localserver" to run server in localhost:5000
 
