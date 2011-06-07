@@ -67,3 +67,13 @@
   date_started: 2011-03-21  
   twitter: TiuTalk
   id: 7
+
+- name: Thiago Leão
+  email: thiagobleao@gmail.com
+  blog: http://thiagobleao@gmail.com
+  feed_url: http://thiagobleao.com/blog/?feed=rss2
+  group: criadores
+  post_meta: 1  
+  date_started: 2011-06-07  
+  twitter: thiagobleao
+  id: 8
