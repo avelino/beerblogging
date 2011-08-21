@@ -1,0 +1,21 @@
+Flask==0.7.2
+Flask-FlatPages==0.2
+Flask-Gravatar==0.2.2
+Flask-Paginator==0.1
+Flask-SQLAlchemy==0.14
+Jinja2==2.6
+Markdown==2.0.3
+PyYAML==3.09
+Pygments==1.4
+SQLAlchemy==0.7.2
+Werkzeug==0.7.1
+bpython==0.10
+epio==0.2.8
+feedformatter==0.4
+feedparser==5.0.1
+-e git+http://github.com/sjl/flask-lesscss.git@724e999f6d728be81f057ac4d5ebc8d9757b950e#egg=flask_lesscss-v0.9.1
+httplib2==0.6.0
+simplejson==2.1.6
+webassets==0.5
+wsgiref==0.1.2
+yolk==0.4.1

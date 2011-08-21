@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>	
+	<!--[if IE ]> 
+		<meta http-equiv="refresh" content="0;url=http://feeds.feedburner.com/beerblogging/">
+	<![endif]-->
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>{% block head_title %}#beerblogging{% endblock %}</title>
+	<meta name="author" content="Victor Fontes, Zeno Rocha">
+	<meta name="description" content="What the f*&% is #beerblogging? It's a f*&%cking bet !">
+	
+	<!-- Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> 
+
+	<!-- Fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Amaranth:regular,400italic,700,700italic" rel="stylesheet" type="text/css" >
+	<link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet" type="text/css" >
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	
+	<script src="{{ url_for('static', filename='js/libs/modernizr-1.7.min.js') }}"></script>
+
+</head>
+
+<body class="fundo yanone">
+	
+	<a href="http://github.com/victorfontes/beerblogging/" id="github"><img src="{{ url_for('static', filename='img/github.png') }}" alt="Fork me on GitHub"></a>
+	
+	<header>
+		<h1 class="amaranth"><a href="/">#beerblogging</a></h1>
+		<nav id="wtf"><a href="/wtf/">WTF?</a></nav>
+		<section id="rss"><a href="http://feeds.feedburner.com/beerblogging">FEED</a></section>
+	</header>
+	
+	<canvas id="ondas"></canvas>
+
+	{% block main_content %}
+	
+	{% endblock %}
+
+	<!-- jQuery Fallback -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+	<script>window.jQuery || document.write("<script src='js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
+
+	<!-- JS -->
+	<script src="{{ url_for('static', filename='js/ondas.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bolhas.js') }}"></script>
+
+	<!-- Google Analytics -->
+	<script>
+		{# TODO: sendo to more than one analytics account ? #}
+		var _gaq=[["_setAccount","UA-4114546-19"],["_trackPageview"]]; 
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+		s.parentNode.insertBefore(g,s)}(document,"script"));
+	</script>
+
+</body>
+</html>

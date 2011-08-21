@@ -1,0 +1,18 @@
+Flask==0.7.2
+
+sqlalchemy==0.7.2
+PyYaml==3.09
+feedparser
+feedformatter
+
+Flask-Gravatar
+Flask-SQLAlchemy
+
+#-e git+https://github.com/victorfontes/flask-paginator.git#egg=flask-paginator
+
+
+
+
+
+
+

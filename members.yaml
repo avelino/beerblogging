@@ -1,0 +1,55 @@
+---
+name: Victor Fontes
+email: contato@victorfontes.com
+blog: http://victorfontes.com/
+feed: http://victorfontes.com/feed/
+twitter: victorfontes
+id: 1
+
+---
+name: Pedro Marins
+email: contato@pedromarins.com
+blog: http://pedromarins.com/
+feed: http://pedromarins.com/feed/
+twitter: pedromarins
+id: 2
+
+---
+name: Arlindo Pereira
+email: nighto@nighto.net
+blog: http://nighto.net/
+feed: http://nighto.net/feed/
+twitter: nighto
+id: 3
+
+---
+name: Tiago Veloso
+email: contato@tiagoveloso.com
+blog: http://tiagoveloso.com/
+feed: http://tiagoveloso.com/feed/
+twitter: tiagoveloso
+id: 4
+
+---
+name: Felipe Arruda
+email: arruda@uniriotec.com
+blog: http://www.arruda.blog.br/
+feed: http://www.arruda.blog.br/?feed=rss2
+twitter: 4rrud4
+id: 5
+
+---
+name: Zeno Rocha
+email: contato@zenorocha.com
+blog: http://blog.zenorocha.com/
+feed: http://feeds.feedburner.com/zenorocha
+twitter: zenorocha
+id: 6
+
+---
+name: Thiago Belem
+email: contato@thiagobelem.net
+blog: http://blog.thiagobelem.net/
+feed: http://blog.thiagobelem.net/feed/
+twitter: TiuTalk
+id: 7
