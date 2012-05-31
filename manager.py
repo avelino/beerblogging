@@ -10,9 +10,8 @@ def run():
     app.run(debug=True)
 
 def run_external():
-    DEBUG = True
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, DEBUG=DEBUG)
+    app.run(host='0.0.0.0', port=port)
 
 def create_db():
     db.create_all()
