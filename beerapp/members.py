@@ -37,13 +37,12 @@ class Member(object):
         feed_posts = feedparser.parse(self.feed)['items']
         for p in feed_posts:
             if p['id'] not in self.post_id_list:
+                dt_published = to_datetime(p['published_parsed'])
                 post = BlogPost(
                     email = self.email, title = p['title'],
                     link = p['link'], id_post = p['id'],
-                    date_post = to_datetime(p['date_parsed']),
-                    date_updated = to_datetime(p['updated_parsed']),
-                    excerpt = p['summary'], content = ''
-                )
+                    date_post = dt_published, date_updated = dt_published,
+                    excerpt = p['summary'], content = p.get('summary', '') )
                 post.save()
 
 class Members(object):
