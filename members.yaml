@@ -42,7 +42,7 @@ id: 5
 name: Zeno Rocha
 email: contato@zenorocha.com
 blog: http://blog.zenorocha.com/
-feed: http://feeds.feedburner.com/zenorocha
+feed: http://feeds.feedburner.com/zenorocha?format=xml
 twitter: zenorocha
 id: 6
 
@@ -54,11 +54,11 @@ feed: http://blog.thiagobelem.net/feed/
 twitter: TiuTalk
 id: 7
 
----
-name: Anna Cruz
-email: contato@annayui.net 
-blog: http://annayui.net/
-feed: http://annayui.net/feed/
-twitter: yuizinha
-id: 8
+#---
+#name: Anna Cruz
+#email: contato@annayui.net 
+#blog: http://annayui.net/
+#feed: http://annayui.net/feed/
+#twitter: yuizinha
+#id: 8
 
