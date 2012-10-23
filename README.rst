@@ -37,8 +37,15 @@ Let's install the f*&%cking thing
 + export BEERBLOGGING_SETTINGS to point at your 'beerblogging/beerblogger/setting_dev.py'
 + Run "manage.py create_db" to create the DB
 + Run "manage.py update_entries" to populate the DB
-+ Run "manage.py localserver" to run server in localhost:5000
++ Run "manage.py run" to run server in localhost:5000
 
-
-epio run_command -a beerblogging python manager.py create_db
-def fetch_posts():
+Deploying
+-------------------------------------
++ To deploy on Heroku:
++ heroku create
++ heroku addons:add heroku-postgresql:dev
++ heroku pg:promote HEROKU_POSTGRESQL_COLOR_URL
++ git push heroku master
++ heroku run python manager.py create_db
++ heroku run ./update_posts.sh
+**OBS:**The update_posts.sh should be runned everytime, to keep tracking new posts.
