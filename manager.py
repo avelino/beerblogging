@@ -1,72 +1,44 @@
-#!/usr/bin/env python
+#! python
 #coding: utf-8
 
+from beerapp import *
 import sys
-from beerblogger import *
+import yaml
+import os
 
+def run():
+    app.run(debug=True)
 
-TASKS = ['localserver', 'externalserver', 'update_entries', 'create_db']
-USAGE_TEXT = u'\nUsage: \n./manager.py command_name (arguments)\n'
+def run_external():
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
 
-DATE_BET_STARTED = datetime(year=2011,month=3,day=21)
+def create_db():
+    db.create_all()
 
-def help(*args):
-    print USAGE_TEXT
+def fetch_posts():
+    members.update_all_entries()
+
+def teste():
+    print app.config['TESTE']
+
+def show_config():
+    #print app.config["SQLALCHEMY_DATABASE_URI"]
+    for k, v in app.config.items():
+        print k + ' :'
+        print v
         
-    for task_name in TASKS:
-        task_func = globals()[task_name]
-        print '- %s: \t %s' % (task_name, task_func.__doc__)
-
-
-def localserver(*args):
-    'runs dev server on "localhost:5000"'
-    app.run()
-
-
-def externalserver(*args):
-    'runs dev server that answers to request from other hosts'
-    app.run(host='0.0.0.0')
-
-
-def create_db(*args):
-    'creates the database'
-    database.connect()
-    BlogEntry.create_table()
-
-
-def update_entries(*args):
-    'Updates database with new posts'
     
-    database.connect()
-    
-    for member in Members().objects:
-        feed = feedparser.parse(member.feed_url)
-        member_entries_ids = [i.eid for i in BlogEntry.select().where(author_email=member.email)]
-
-        for entry in feed['items']:
-            if entry['id'] not in member_entries_ids:
-                #if datetime.fromtimestamp(mktime(entry['updated_parsed'])) > DATE_BET_STARTED:
-                if datetime.fromtimestamp(mktime(entry['updated_parsed'])).date() >= member.date_started:
-                    new_entry = BlogEntry()
-                    new_entry.title = entry['title']
-                    new_entry.author_email = member.email                    
-                    new_entry.betting_group = member.group
-                    new_entry.summary = entry['summary']
-                    #new_entry.content = entry['content']
-                    new_entry.link = entry['link']
-                    new_entry.eid = entry['id']
-                    new_entry.updated = datetime.fromtimestamp(mktime(entry['updated_parsed']))
-                    new_entry.date = datetime.fromtimestamp(mktime(entry['date_parsed']))
-                    new_entry.save()
-    
-    database.close()
- 
-    
+                
 if __name__ == '__main__':
     'Calls the method with the given name with the other args (if any)'
 
-    task_func = sys.argv[1]
-    task_args = sys.argv[2:]
+    func_name = sys.argv[1]
+    task = globals()[func_name]
 
-    task = globals()[task_func]
-    task(task_args)
+    try:
+        task(sys.argv[2:])
+    except:
+        task()
+        
+        

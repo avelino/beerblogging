@@ -39,3 +39,6 @@ Let's install the f*&%cking thing
 + Run "manage.py update_entries" to populate the DB
 + Run "manage.py localserver" to run server in localhost:5000
 
+
+epio run_command -a beerblogging python manager.py create_db
+def fetch_posts():

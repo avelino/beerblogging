@@ -1,0 +1,6 @@
+<h1>{{ FEED_FMT }}</h1>
+<ul>
+{% for post in sorted_entries %}
+    <li>{{post.date_post.strftime('%d/%m/%y') }} -- {{post.link}}</li>
+{% endfor %}
+</ul>
