@@ -48,4 +48,4 @@ Deploying
 + git push heroku master
 + heroku run python manager.py create_db
 + heroku run ./update_posts.sh
-**OBS:**The update_posts.sh should be runned everytime, to keep tracking new posts.
+**OBS:** The update_posts.sh should be runned everytime, to keep tracking new posts.
