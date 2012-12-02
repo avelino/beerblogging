@@ -43,3 +43,11 @@ Let's install the f*&%cking thing
 
 epio run_command -a beerblogging python manager.py create_db
 def fetch_posts():
+
+Heroku
+------
+
+Run work (process job)
+
+    heroku ps:scale worker=1
+
