@@ -71,26 +71,10 @@ twitter: avelino0
 id: 9
 
 ---
-name: Thiago Leão
-email: thiagobleao@gmail.com
-blog: http://thiagobleao.com/blog
-feed_url: http://thiagobleao.com/blog/?feed=rss2
-twitter: thiagobleao
-id: 10
-
----
-name: Rafael Villa-Verde
-email: contato@rafaelvillaverde.com
-blog: http://rafaelvillaverde.com/blog/
-feed: http://rafaelvillaverde.com/blog/?feed=rss2
-twitter: hafael_
-id: 11
-
----
 name: Bruno Borges
 email: bruno.borges@gmail.com
 blog: http://blog.brunoborges.com.br
 feed_url: http://feeds.feedburner.com/BlogdoBrunoBorges
 twitter: brunoborges
-id: 12
+id: 10
 
