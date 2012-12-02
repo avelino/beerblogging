@@ -71,12 +71,12 @@ twitter: avelino0
 id: 9
 
 ---
-- name: Thiago Leão
-  email: thiagobleao@gmail.com
-  blog: http://thiagobleao.com/blog
-  feed_url: http://thiagobleao.com/blog/?feed=rss2
-  twitter: thiagobleao
-  id: 10
+name: Thiago Leão
+email: thiagobleao@gmail.com
+blog: http://thiagobleao.com/blog
+feed_url: http://thiagobleao.com/blog/?feed=rss2
+twitter: thiagobleao
+id: 10
 
 ---
 name: Rafael Villa-Verde
