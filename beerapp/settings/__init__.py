@@ -11,11 +11,11 @@ from settings_dev import *
 
 import os
 
-CURRENT_ENV = os.environ.get('ENV_BEERBLOGGING', 'DEV')
+ON_HEROKU = os.environ.has_key('DATABASE_URL')
 
 from settings_common import *
 
-if CURRENT_ENV.upper() == 'PROD':
+if ON_HEROKU:
     from settings_prod import *
 else:
     from settings_dev import *
