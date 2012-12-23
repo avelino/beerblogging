@@ -16,6 +16,11 @@ def run_external():
 def create_db():
     db.create_all()
 
+def reset_db():
+    "drop the db and creates it again"
+    db.drop_all()
+    db.create_all()
+
 def fetch_posts():
     members.update_all_entries()
 
