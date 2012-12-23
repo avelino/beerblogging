@@ -4,6 +4,7 @@ email: contato@victorfontes.com
 blog: http://victorfontes.com/
 feed: http://victorfontes.com/feed/
 twitter: victorfontes
+date_joined: !!timestamp '2011-03-21 00:00:01'
 id: 1
 
 ---
@@ -12,6 +13,7 @@ email: contato@pedromarins.com
 blog: http://pedromarins.com/
 feed: http://pedromarins.com/feed/
 twitter: pedromarins
+date_joined: !!timestamp '2011-03-21 00:00:01'
 id: 2
 
 ---
@@ -20,6 +22,7 @@ email: nighto@nighto.net
 blog: http://nighto.net/
 feed: http://nighto.net/feed/
 twitter: nighto
+date_joined: !!timestamp '2011-03-21 00:00:01'
 id: 3
 
 ---
@@ -28,6 +31,7 @@ email: contato@tiagoveloso.com
 blog: http://tiagoveloso.com/
 feed: http://tiagoveloso.com/feed/
 twitter: tiagoveloso
+date_joined: !!timestamp '2011-03-21 00:00:01'
 id: 4
 
 ---
@@ -36,6 +40,7 @@ email: arruda@uniriotec.com
 blog: http://www.arruda.blog.br/
 feed: http://www.arruda.blog.br/?feed=rss2
 twitter: 4rrud4
+date_joined: !!timestamp '2011-03-21 00:00:01'
 id: 5
 
 ---
@@ -44,6 +49,7 @@ email: contato@zenorocha.com
 blog: http://blog.zenorocha.com/
 feed: http://feeds.feedburner.com/zenorocha?format=xml
 twitter: zenorocha
+date_joined: !!timestamp '2011-03-21 00:00:01'
 id: 6
 
 ---
@@ -52,6 +58,7 @@ email: contato@thiagobelem.net
 blog: http://blog.thiagobelem.net/
 feed: http://blog.thiagobelem.net/feed/
 twitter: TiuTalk
+date_joined: !!timestamp '2011-03-21 00:00:01'
 id: 7
 
 #---
