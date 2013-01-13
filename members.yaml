@@ -1,80 +1,33 @@
 ---
-name: Victor Fontes
-email: contato@victorfontes.com
-blog: http://victorfontes.com/
-feed: http://victorfontes.com/feed/
-twitter: victorfontes
-id: 1
-
----
-name: Pedro Marins
-email: contato@pedromarins.com
-blog: http://pedromarins.com/
-feed: http://pedromarins.com/feed/
-twitter: pedromarins
-id: 2
-
----
-name: Arlindo Pereira
-email: nighto@nighto.net
-blog: http://nighto.net/
-feed: http://nighto.net/feed/
-twitter: nighto
-id: 3
-
----
-name: Tiago Veloso
-email: contato@tiagoveloso.com
-blog: http://tiagoveloso.com/
-feed: http://tiagoveloso.com/feed/
-twitter: tiagoveloso
-id: 4
-
----
-name: Felipe Arruda
-email: arruda@uniriotec.com
-blog: http://www.arruda.blog.br/
-feed: http://www.arruda.blog.br/?feed=rss2
-twitter: 4rrud4
-id: 5
-
----
 name: Zeno Rocha
 email: contato@zenorocha.com
-blog: http://blog.zenorocha.com/
+blog: http://zenorocha.com/
 feed: http://feeds.feedburner.com/zenorocha?format=xml
 twitter: zenorocha
-id: 6
-
----
-name: Thiago Belem
-email: contato@thiagobelem.net
-blog: http://blog.thiagobelem.net/
-feed: http://blog.thiagobelem.net/feed/
-twitter: TiuTalk
-id: 7
-
-#---
-#name: Anna Cruz
-#email: contato@annayui.net 
-#blog: http://annayui.net/
-#feed: http://annayui.net/feed/
-#twitter: yuizinha
-#id: 8
+id: 1
 
 ---
 name: Thiago Avelino
 email: thiagoavelinoster@gmail.com
 blog: http://avelino.us
-feed: http://feeds.feedburner.com/pyavelino
+feed: http://feeds.feedburner.com/pyavelino?format=xml
 twitter: avelino0
-id: 9
+id: 2
 
 ---
-name: Bruno Borges
-email: bruno.borges@gmail.com
-blog: http://blog.brunoborges.com.br
-feed: http://feeds.feedburner.com/BlogdoBrunoBorges
-twitter: brunoborges
-id: 10
+name: Renato Mangini
+email: mangini@google.com
+blog: http://www.renatomangini.com/
+feed: http://www.renatomangini.com/feeds/posts/default
+twitter: renatomangini
+id: 3
 
+---
+name: Daniel Filho
+email: daniel.filho@gmail.com
+blog: http://danielfilho.info/
+feed: http://danielfilho.info/atom.xml
+twitter: danielfilho
+id: 4
+
+---
