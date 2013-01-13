@@ -2,7 +2,7 @@
 
 ## What the f*&% is #beerblogging ?
 
-It's a f*&%cking bet! 
+It's a f*&%cking bet!
 
 You have 1 month to write at least 1 blogpost. If you don't do that, you have to pay a beer for everybody.
 
@@ -23,10 +23,10 @@ We're using:
 
 ## Install
 
-1. To install it, first you need to clone this repository: `git clone git@github.com:zenorocha/beerblogging.git`
-* Then install all requirements, using `beerblogging/beerblogger/etc/requirements.txt`
-* Run `manage.py create_db` to create the DB
-* Run `manage.py fetch_posts` to populate the DB
+1. First you need to clone this repository: `git clone git@github.com:zenorocha/beerblogging.git`
+* Then install all requirements by running `pip install requirements.txt`
+* Run `manage.py create_db` to create the database
+* Run `manage.py fetch_posts` to populate the database
 * Run `manage.py run` to run server in [localhost:5000](http://localhost:5000)
 
 ## Deploying
