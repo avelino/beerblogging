@@ -8,8 +8,8 @@ You have 1 month to write at least 1 blogpost. If you don't do that, you have to
 
 ## Who are the BeerBloggers ?
 
-* Felipe Arruda: [Blog](http://arruda.blog.br/) ~ [Feed](http://www.arruda.blog.br/?feed=rss2)
 * Daniel Filho: [Blog](http://danielfilho.info/) ~ [Feed](http://danielfilho.info/atom.xml)
+* Felipe Arruda: [Blog](http://arruda.blog.br/) ~ [Feed](http://www.arruda.blog.br/?feed=rss2)
 * Renato Mangini: [Blog](http://www.renatomangini.com/) ~ [Feed](http://www.renatomangini.com/feeds/posts/default)
 * Thiago Avelino: [Blog](http://avelino.us/) ~ [Feed](http://feeds.feedburner.com/pyavelino)
 * Zeno Rocha: [Blog](http://zenorocha.com/) ~ [Feed](http://feeds.feedburner.com/zenorocha)
