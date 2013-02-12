@@ -10,7 +10,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
 	<title>{% block head_title %}#beerblogging{% endblock %}</title>
-	<meta name="author" content="Victor Fontes, Zeno Rocha, Thiago Avelino">
+	<meta name="author" content="Victor Fontes, Zeno Rocha, Thiago Avelino, Felipe Arruda">
 	<meta name="description" content="What the f*&% is #beerblogging? It's a f*&%cking bet !">
 	
 	<!-- Viewport -->
@@ -54,6 +54,9 @@
 	<!-- JS -->
 	<script src="{{ url_for('static', filename='js/ondas.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/bolhas.js') }}"></script>
+	<script type=text/javascript>
+	  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+	</script>
 
 	<!-- Google Analytics -->
 	<script>
@@ -63,6 +66,10 @@
 		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
 		s.parentNode.insertBefore(g,s)}(document,"script"));
 	</script>
+
+	{% block js_onpage %}
+	
+	{% endblock %}
 
 </body>
 </html>
