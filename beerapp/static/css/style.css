@@ -196,6 +196,16 @@ header {
 		.avatar img:hover {
 			border: 2px solid #E0BC20;
 		}
+
+
+		/* --- Give Beer --- */
+	
+		.give-beer {
+			float: right;
+			margin: 10px 25px 0 0;
+			width: 75px;
+			height: 75px;
+		}
 	
 		
 

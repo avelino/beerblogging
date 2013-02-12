@@ -18,10 +18,20 @@
             	<h3 class="autor"><a href="{{ post.member.blog }}">por {{ post.member.name }}</a></h3> 
         	</hgroup>
         	
-        	<section class="avatar">
-        		<a href="{{ post.member.blog }}"><img src="{{ post.author_email | gravatar }}" 
-					alt="Picture of {{ post.member.name }}" /></a>
-        	</section>
+            <section class="avatar">
+                <a href="{{ post.member.blog }}"><img src="{{ post.author_email | gravatar }}" 
+                    alt="Picture of {{ post.member.name }}" /></a>
+            </section>
+            <section class="give-beer">
+
+                <form id="give_beer_{{ post.id }}" action="{{ url_for('give_beer') }}" method="POST">
+                    <input hidden="true" type="text" name="id" value="{{ post.id }}"/>
+                    <a href="#" onclick="add_beer(parentNode); return false">
+                        <img src="{{ url_for('static', filename='img/beer-icon.png') }}" 
+                    alt="Give a beer too {{ post.member.name }}" /><span class="total">{{ post.beers }}</span>
+                    </a>
+                </form>
+            </section>
 		
 		</article>
 
@@ -44,7 +54,41 @@
 			<a href="/?page={{pagination.page + 1}}"> - Pr&oacute;xima &raquo;</a>
 		{% endif %}
 	</div>
-    
+
 	</div><!-- fim #container -->
 
+{% endblock %}
+
+{% block js_onpage %}
+
+    <script type=text/javascript>
+        $.fn.serializeObject = function()
+        {
+           var o = {};
+           var a = this.serializeArray();
+           $.each(a, function() {
+               if (o[this.name]) {
+                   if (!o[this.name].push) {
+                       o[this.name] = [o[this.name]];
+                   }
+                   o[this.name].push(this.value || '');
+               } else {
+                   o[this.name] = this.value || '';
+               }
+           });
+           return o;
+        };
+
+        function add_beer(form){
+
+            var jqform = $(form);
+              $.post($SCRIPT_ROOT + '/give_beer', 
+                 jqform.serializeObject(),
+                  function(data) {
+                    console.log(data.result);
+                    jqform.find(".total").text(data.result);
+                });
+        }
+
+        </script>
 {% endblock %}

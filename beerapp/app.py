@@ -10,7 +10,7 @@
 """
 
 
-from flask import Flask, g, render_template, request
+from flask import Flask, g, render_template, request,jsonify
 
 from flaskext.gravatar import Gravatar
 from flaskext.sqlalchemy import SQLAlchemy
@@ -67,6 +67,13 @@ def teste(feed_fmt):
     else:
         return feed_bb.rss()
 
+@app.route('/give_beer', methods = ['POST'])
+def give_beer():
+    id_post = request.form.get('id', 0, type=int)
+    post = BlogPost.query.get_or_404(id_post)
+    post.beers += 1
+    post.save()
+    return jsonify(result=post.beers)
 
         
 

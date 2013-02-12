@@ -21,9 +21,11 @@ class BlogPost(db.Model):
     date_post = db.Column(db.DateTime)
     date_updated = db.Column(db.DateTime)
 
-    tags = db.Column(db.String(512), default='')    
+    tags = db.Column(db.String(512), default='')  
 
-    def __init__(self, email, title, link, id_post, date_post, date_updated, excerpt='', content='', tags=''):
+    beers = db.Column(db.Integer,default=0)
+
+    def __init__(self, email, title, link, id_post, date_post, date_updated, excerpt='', content='', tags='',beers=0):
         self.author_email = email
 
         self.title = title
@@ -36,6 +38,7 @@ class BlogPost(db.Model):
         self.excerpt = excerpt
         self.content = content
         self.tags = tags
+        self.beers = beers
 
     @hybrid_property
     def member(self):
