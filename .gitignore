@@ -3,3 +3,5 @@
 *.db
 *.sqlite
 .DS_Store
+.ropeproject
+*.sublime-*
