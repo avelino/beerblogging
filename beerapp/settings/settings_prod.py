@@ -2,7 +2,7 @@
 from beerapp.helpers import AlchemyURI
 from os import environ
 
-DEBUG = True
+DEBUG = False
 
 MEMBERS_FILE = 'members.yaml'
 
