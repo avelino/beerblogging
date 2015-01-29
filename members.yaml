@@ -38,8 +38,8 @@ id: 4
 ---
 name: Daniel Filho
 email: daniel.filho@gmail.com
-blog: http://danielfilho.info/
-feed: http://danielfilho.info/atom.xml
+blog: http://danielfilho.github.io/
+feed: http://danielfilho.github.io/feed.xml
 twitter: danielfilho
 date_joined: !!timestamp '2011-03-21 00:00:01'
 id: 5
