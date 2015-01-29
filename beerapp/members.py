@@ -13,7 +13,9 @@ import yaml
 import feedparser
 from helpers import to_datetime
 
-DATE_BET_STARTED = datetime.datetime(year=2011,month=3,day=21)
+
+DATE_BET_STARTED = datetime.datetime(year=2011, month=3, day=21)
+
 
 class Member(object):
     def __init__(self, member_dic):
@@ -24,6 +26,7 @@ class Member(object):
         self.feed = member_dic['feed']
         self.twitter = member_dic['twitter']
         self.date_joined = member_dic['date_joined']
+        self.tags = member_dic.get('tags', '')
 
     @property
     def posts(self):
@@ -32,12 +35,11 @@ class Member(object):
 
     @property
     def post_id_list(self):
-        return [ post.id_post for post in self.posts ]
-        
-        
+        return [post.id_post for post in self.posts]
+
     def fetch_entries(self):
         from posts import BlogPost
-        print "fetching entries for: %s" % self.name
+        print "fetching entries for: {0}".format(self.name)
         try:
             feed_posts = feedparser.parse(self.feed)['items']
             for p in feed_posts:
@@ -45,26 +47,33 @@ class Member(object):
                     dt_published = to_datetime(p['updated_parsed'])
                     if dt_published > self.date_joined:
                         post = BlogPost(
-                            email = self.email, title = p['title'],
-                            link = p['link'], id_post = p['id'],
-                            date_post = dt_published, date_updated = dt_published,
-                            excerpt = p['summary'], content = p.get('summary', '') )
+                            email=self.email,
+                            title=p['title'],
+                            link=p['link'],
+                            id_post=p['id'],
+                            date_post=dt_published,
+                            date_updated=dt_published,
+                            excerpt=p['summary'],
+                            content=p.get('summary', ''),
+                            tags=self.tags
+                        )
                         post.save()
         except:
-            print 
+            pass
+
 
 class Members(object):
     def __init__(self, app):
         self.app = app
         members_str = open(app.config['MEMBERS_FILE']).read()
-        self.all = map(Member, yaml.load_all(members_str) )
-        
+        self.all = map(Member, yaml.load_all(members_str))
+
     def for_email(self, email):
         for m in self.all:
             if m.email.lower() == email.lower():
                 return m
         return None
-        
+
     def update_all_entries(self):
         for member in self.all:
-            member.fetch_entries()            
+            member.fetch_entries()
