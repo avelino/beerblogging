@@ -24,8 +24,8 @@ We're using:
 
 ## Install
 
-1. First you need to clone this repository: `git clone git@github.com:zenorocha/beerblogging.git`
-* Then install all requirements by running `pip install -r requirements.locals.txt`
+1. First you need to clone this repository: `git clone git@github.com:avelino/beerblogging.git`
+* Then install all requirements by running `pip install -r requirements.txt`
 * Run `./manager.py create_db` to create the database
 * Run `./manager.py fetch_posts` to populate the database
 * Run `./manager.py run` to run server in [localhost:5000](http://localhost:5000)
