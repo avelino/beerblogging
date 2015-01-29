@@ -1,27 +1,3 @@
 Victor Fontes
 Zeno Rocha
-
-scp vcs@ssh.ep.io:beerblogging cerva
-
-scp vcs@ssh.ep.io:beerblogging/*.txt /tmp/
-
-victor@macbook-de-victor-fontes:bb scp vcs@ssh.ep.io:beerblogging/*.py .
-
-
-
-
-scp vcs@ssh.ep.io:beerblogging/*.py .
-
-epio run_command bash
-rsync -rv my_huge_files/ vcs@ssh.ep.io:yourappname/
-
-
-scp vcs@ssh.ep.io:beerblogging/app t/
-
- have no name!@app-runner03:/mnt/bundles/port-8097/app_image/app$ pwd
-/mnt/bundles/port-8097/app_image/app
-
-beerblogging
-.epio-app
-
-scp vcs@ssh.ep.io:beerblogging/*.sh t/
+Thiago Avelino
