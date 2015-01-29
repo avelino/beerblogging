@@ -8,6 +8,7 @@
     :copyright: (c) YEAR by AUTHOR.
     :license: LICENSE_NAME, see LICENSE_FILE for more details.
 """
+import yaml
 from flask import Flask, g, render_template, request
 
 from flaskext.gravatar import Gravatar
@@ -44,9 +45,11 @@ from feed_generator import FeedGenerator
 
 def TAGS():
     _TAGS = []
-    for b in BlogPost.query.group_by(BlogPost.author_email):
-        if b.tags != "":
-            for tag in b.tags.split(","):
+    members_str = open(app.config['MEMBERS_FILE']).read()
+    import pdb; pdb.set_trace()
+    for member in yaml.load_all(members_str):
+        if member.get('tags'):
+            for tag in member['tags'].split(","):
                 _TAGS.append(tag.strip())
     return set(_TAGS)
 
