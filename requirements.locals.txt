@@ -1,8 +1,8 @@
-Flask==0.7.2
+Flask==0.10.1
 Flask-Gravatar==0.2.3
 Flask-SQLAlchemy==0.15
 Jinja2==2.6
-PyYAML==3.09
+PyYAML==3.11
 SQLAlchemy==0.7.2
 Werkzeug==0.8.3
 feedformatter==0.4
