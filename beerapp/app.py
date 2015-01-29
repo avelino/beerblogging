@@ -46,7 +46,6 @@ from feed_generator import FeedGenerator
 def TAGS():
     _TAGS = []
     members_str = open(app.config['MEMBERS_FILE']).read()
-    import pdb; pdb.set_trace()
     for member in yaml.load_all(members_str):
         if member.get('tags'):
             for tag in member['tags'].split(","):
