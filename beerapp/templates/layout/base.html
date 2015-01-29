@@ -33,11 +33,18 @@
 
 <body class="fundo yanone">
 	
-	<a href="http://github.com/zenorocha/beerblogging/" id="github"><img src="{{ url_for('static', filename='img/github.png') }}" alt="Fork me on GitHub"></a>
+	<a href="http://github.com/avelino/beerblogging/" id="github"><img src="{{ url_for('static', filename='img/github.png') }}" alt="Fork me on GitHub"></a>
 	
 	<header>
 		<h1 class="amaranth"><a href="/">#beerblogging</a></h1>
-		<nav id="wtf"><a href="/wtf/">WTF?</a></nav>
+		<nav id="wtf">
+			<a href="/wtf/">WTF?</a>
+			<ul>
+				{% for tag in tags %}
+				<li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
 		<section id="rss"><a href="http://feeds.feedburner.com/beerblogging">FEED</a></section>
 	</header>
 	
