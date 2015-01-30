@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-
 from app import db, members
 
-from sqlalchemy.ext.hybrid import hybrid_property, hybrid_method
+from sqlalchemy.ext.hybrid import hybrid_property
 
 
 class BlogPost(db.Model):
@@ -21,7 +20,7 @@ class BlogPost(db.Model):
     date_post = db.Column(db.DateTime)
     date_updated = db.Column(db.DateTime)
 
-    tags = db.Column(db.String(512), default='')    
+    tags = db.Column(db.String(512), default='')
 
     def __init__(self, email, title, link, id_post, date_post, date_updated, excerpt='', content='', tags=''):
         self.author_email = email
@@ -44,7 +43,7 @@ class BlogPost(db.Model):
     def save(self):
         db.session.add(self)
         db.session.commit()
-        
+
     def __repr__(self):
         return '<Post %s de %s>' % (self.id_post, self.author_email)
 

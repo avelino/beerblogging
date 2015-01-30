@@ -3,13 +3,14 @@ from feedformatter import Feed
 FEED_HEADER = '<?xml version="1.0" encoding="UTF-8"?>'
 FEED_TEMPLATE = "%s \n %s"
 
+
 class FeedGenerator(object):
     def __init__(self, **kwargs):
         self.feed = Feed()
         self.header = FEED_HEADER
 
         for k, v in kwargs.items():
-            self.add_meta(k,v)
+            self.add_meta(k, v)
 
     def add_meta(self, label, val):
         self.feed.feed[label] = val
@@ -29,11 +30,10 @@ class FeedGenerator(object):
         else:
             feed_str = self.feed.format_rss2_string()
 
-        return FEED_TEMPLATE % (self.header, feed_str)        
+        return FEED_TEMPLATE % (self.header, feed_str)
 
     def rss(self):
         return self.render('rss')
 
     def atom(self):
         return self.render('atom')
-

@@ -44,3 +44,12 @@ twitter: danielfilho
 date_joined: !!timestamp '2011-03-21 00:00:01'
 id: 5
 
+---
+name: Ellison Leão
+email: ellisonleao@gmail.com
+blog: https://medium.com/@ellisonleao
+feed: https://medium.com/feed/@ellisonleao/
+twitter: ellisonleao
+date_joined: !!timestamp '2014-01-29 00:00:01'
+tags: python, gamedev, unity3d, javascript
+id: 6
