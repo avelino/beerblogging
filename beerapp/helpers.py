@@ -12,8 +12,9 @@
 from functools import wraps
 from flask import render_template
 
-from datetime import datetime    
+from datetime import datetime
 from time import mktime
+
 
 class SADialects(object):
     DIALECTS = {
@@ -21,25 +22,26 @@ class SADialects(object):
         'MYSQL': 'mysql://',
         'POSTGRE': 'postgresql://',
         'ORACLE': 'oracle://', }
-    
+
     DRIVERS = {
-        'SQLITE': ['__skip_driver_check__',],
-        'MYSQL': ['__skip_driver_check__',],        
-        'ORACLE': ['__skip_driver_check__',],                
-        'POSTGRE': ['psycopg2',], }
+        'SQLITE': ['__skip_driver_check__', ],
+        'MYSQL': ['__skip_driver_check__', ],
+        'ORACLE': ['__skip_driver_check__', ],
+        'POSTGRE': ['psycopg2', ], }
 
     class __metaclass__(type):
         def __getattr__(cls, attr):
             dialects = object.__getattribute__(cls, 'DIALECTS')
 
-            if attr.lower() in map(lambda x: x.lower(), dialects.keys() ):
+            if attr.lower() in map(lambda x: x.lower(), dialects.keys()):
                 dialect = dialects[attr.upper()] + "%s%s"
-                return lambda *args: dialect % ('+', args[0]) if len(args) > 1 else dialect %  ('','')
+                return lambda *args: dialect % ('+', args[0]) if len(args) > 1 else dialect % ('', '')
 
             return object.__getattribute__(cls, attr)
 
+
 class AlchemyURI(object):
-    
+
     def __init__(self, database=None, user=None, pwd=None, host='localhost', port=''):
         self.db = database
         self.user = user
@@ -49,7 +51,7 @@ class AlchemyURI(object):
 
     @property
     def host(self):
-        port = ':' + self._port if bool(self._port) else '' 
+        port = ':' + self._port if bool(self._port) else ''
         return self._host + port
 
     def _conn_string(self):
@@ -69,13 +71,13 @@ class AlchemyURI(object):
 
     def oracle(self, driver=''):
         return SADialects.oracle(driver) + self._conn_string()
-        
-        
+
 
 def to_datetime(dt_str):
     "converts a timestamp string to datetime.datetime"
     entry_time = mktime(dt_str)
     return datetime.fromtimestamp(entry_time)
+
 
 def br_month_filter(value):
     br_months = {
@@ -88,11 +90,12 @@ def br_month_filter(value):
         7: 'Julho',
         8: 'Agosto',
         9: 'Setembro',
-       10: 'Outubro',
-       11: 'Novembro',
-       12: 'Dezembro',                                                                                        
+        10: 'Outubro',
+        11: 'Novembro',
+        12: 'Dezembro',
     }
     return br_months[value.month][:3]
+
 
 def to_html(template):
     " render_template shortcut, views just need to return locals() "

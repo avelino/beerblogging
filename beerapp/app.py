@@ -9,7 +9,7 @@
     :license: LICENSE_NAME, see LICENSE_FILE for more details.
 """
 import yaml
-from flask import Flask, g, render_template, request
+from flask import Flask, render_template
 
 from flaskext.gravatar import Gravatar
 from flaskext.sqlalchemy import SQLAlchemy
@@ -36,7 +36,7 @@ members = Members(app)
 
 app.jinja_env.filters['br_month'] = br_month_filter
 
-from posts import *
+from posts import BlogPost
 
 paginator.register('posts', BlogPost.query.count)
 
