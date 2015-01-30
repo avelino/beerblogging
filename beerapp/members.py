@@ -39,7 +39,7 @@ class Member(object):
 
     def fetch_entries(self):
         from posts import BlogPost
-        print "fetching entries for: {0}".format(self.name)
+        print u'fetching entries for: {0}'.format(self.name)
         try:
             feed_posts = feedparser.parse(self.feed)['items']
             for p in feed_posts:
