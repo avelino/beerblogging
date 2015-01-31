@@ -1,5 +1,7 @@
 # BeerBlogging
 
+[![Build Status](https://travis-ci.org/avelino/beerblogging.svg?branch=master)](https://travis-ci.org/avelino/beerblogging)
+
 ## What the f*&% is #beerblogging ?
 
 It's a f*&%cking bet!
