@@ -35,6 +35,17 @@ We're using:
 * Run `./manager.py fetch_posts` to populate the database
 * Run `./manager.py run` to run server in [localhost:5000](http://localhost:5000)
 
+
+## Testing
+
+Just execute:
+
+```
+$ make test
+```
+
+And it should run the tests for you.
+
 ## Deploying
 
 To deploy on Heroku:
