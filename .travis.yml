@@ -2,8 +2,13 @@ language: python
 
 python: "2.7"
 
-install: pip install -r requirements.locals.txt
+install:
+    - pip install -r requirements.locals.txt
+    - pip install coveralls
 
 script:
-    - flake8 beerapp --ignore=F403,F401,F821
-    - python${PY:-} tests.py
+    - make lint
+    - make coverage
+
+after_success:
+  coveralls
