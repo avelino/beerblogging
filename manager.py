@@ -38,6 +38,7 @@ def show_config():
         print k + ' :'
         print v
 
+
 if __name__ == '__main__':
     'Calls the method with the given name with the other args (if any)'
 
