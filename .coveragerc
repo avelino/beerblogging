@@ -1,0 +1,20 @@
+[run]
+source = .
+omit =
+    *__init__.py
+    *tests.py
+
+[report]
+exclude_lines =
+    pragma: no cover
+    if __name__ == .__main__.
+    if settings.DEBUG
+    if self.debug
+    def __repr__
+    def __str__
+    def __unicode__
+show_missing = True
+
+[html]
+directory = htmlcov
+title = Coverage Report
