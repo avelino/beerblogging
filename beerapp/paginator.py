@@ -23,7 +23,8 @@ class Pagination(object):
     def has_next(self):
         return self.page < self.pages
 
-    def iter_pages(self, left_edge=2, left_current=2, right_current=5, right_edge=2):
+    def iter_pages(self, left_edge=2, left_current=2, right_current=5,
+                   right_edge=2):
         last = 0
         for num in xrange(1, self.pages + 1):
             if num <= left_edge or \
@@ -55,7 +56,6 @@ class Paginator(object):
         " Register an object for pagination, allowing to use it in any view "
         if label not in self.managers:
             self.managers[label] = self._register_dic(f_total, per_page)
-            manager_attr = 'for_' + label.lower()
 
     def _manager(self, label):
         " attrs of a registred type "
@@ -67,7 +67,8 @@ class Paginator(object):
     def get_manager(self, label):
         " pagination manager object to use in a view "
         manager = self._manager(label)
-        return Pagination(self._current_page(), manager['per_page'], manager['f_total']())
+        return Pagination(self._current_page(), manager['per_page'],
+                          manager['f_total']())
 
     def _current_page(self):
         " gets current page from request "

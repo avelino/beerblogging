@@ -1,4 +1,4 @@
-#coding: utf-8
+# -*- coding: utf-8 -*-
 from beerapp.helpers import AlchemyURI
 
 DEBUG = True
@@ -12,5 +12,5 @@ DB_USER = 'root'
 DB_PWD = 'winspector$$'
 
 TESTE = AlchemyURI(database='db.sqlite').mysql()
-TESTE = AlchemyURI(database=DB_NAME,user=DB_USER,pwd=DB_PWD,host=DB_HOST).mysql()
-#SQLALCHEMY_DATABASE_URI = AlchemyURI(database=DB_NAME,user=DB_USER,pwd=DB_PWD,host=DB_HOST).mysql
+TESTE = AlchemyURI(database=DB_NAME, user=DB_USER, pwd=DB_PWD,
+                   host=DB_HOST).mysql()

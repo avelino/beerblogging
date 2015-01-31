@@ -35,14 +35,16 @@ class SADialects(object):
 
             if attr.lower() in map(lambda x: x.lower(), dialects.keys()):
                 dialect = dialects[attr.upper()] + "%s%s"
-                return lambda *args: dialect % ('+', args[0]) if len(args) > 1 else dialect % ('', '')
+                return lambda *args: dialect % (
+                    '+', args[0]) if len(args) > 1 else dialect % ('', '')
 
             return object.__getattribute__(cls, attr)
 
 
 class AlchemyURI(object):
 
-    def __init__(self, database=None, user=None, pwd=None, host='localhost', port=''):
+    def __init__(self, database=None, user=None, pwd=None, host='localhost',
+                 port=''):
         self.db = database
         self.user = user
         self.pwd = pwd

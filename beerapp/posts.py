@@ -22,7 +22,8 @@ class BlogPost(db.Model):
 
     tags = db.Column(db.String(512), default='')
 
-    def __init__(self, email, title, link, id_post, date_post, date_updated, excerpt='', content='', tags=''):
+    def __init__(self, email, title, link, id_post, date_post, date_updated,
+                 excerpt='', content='', tags=''):
         self.author_email = email
 
         self.title = title
