@@ -64,3 +64,12 @@ twitter: erichideki
 date_joined: !!timestamp '2014-02-01 00:00:01'
 tags: python, django, flask, development
 id: 7
+
+---
+name: Mateus Ortiz
+email: mteusortiz@gmail.com
+blog: http://mateusortiz.com
+feed: http://feeds.feedburner.com/mateusortiz?format=xml
+twitter: mteusortiz
+date_joined: !!timestamp '2015-02-06 00:00:01'
+id: 8
