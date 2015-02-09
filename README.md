@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/avelino/beerblogging.svg?branch=master)](https://travis-ci.org/avelino/beerblogging)
 
+[![Coverage Status](https://coveralls.io/repos/avelino/beerblogging/badge.svg)](https://coveralls.io/r/avelino/beerblogging)
+
 ## What the f*&% is #beerblogging ?
 
 It's a f*&%cking bet!
@@ -16,6 +18,7 @@ You have 1 month to write at least 1 blogpost. If you don't do that, you have to
 * Thiago Avelino: [Blog](http://avelino.us/) ~ [Feed](http://feeds.feedburner.com/pyavelino)
 * Zeno Rocha: [Blog](http://zenorocha.com/) ~ [Feed](http://feeds.feedburner.com/zenorocha)
 * Ellison Leão: [Blog](https://medium.com/@ellisonleao) ~ [Feed](https://medium.com/feed/@ellisonleao)
+* Eric Hideki:[Blog](http://ericstk.wordpress.com) ~ [Feed](https://ericstk.wordpress.com/feed/)
 
 ## Let's talk about code...
 
@@ -32,6 +35,17 @@ We're using:
 * Run `./manager.py create_db` to create the database
 * Run `./manager.py fetch_posts` to populate the database
 * Run `./manager.py run` to run server in [localhost:5000](http://localhost:5000)
+
+
+## Testing
+
+Just execute:
+
+```
+$ make test
+```
+
+And it should run the tests for you.
 
 ## Deploying
 
