@@ -19,6 +19,7 @@ You have 1 month to write at least 1 blogpost. If you don't do that, you have to
 * Zeno Rocha: [Blog](http://zenorocha.com/) ~ [Feed](http://feeds.feedburner.com/zenorocha)
 * Ellison Leão: [Blog](https://medium.com/@ellisonleao) ~ [Feed](https://medium.com/feed/@ellisonleao)
 * Eric Hideki:[Blog](http://ericstk.wordpress.com) ~ [Feed](https://ericstk.wordpress.com/feed/)
+* Mateus Ortiz: [Blog](http://mateusortiz.com) ~ [Feed](http://feeds.feedburner.com/mateusortiz)
 
 ## Let's talk about code...
 
