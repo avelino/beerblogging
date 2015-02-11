@@ -73,3 +73,12 @@ feed: http://feeds.feedburner.com/mateusortiz?format=xml
 twitter: mteusortiz
 date_joined: !!timestamp '2015-02-06 00:00:01'
 id: 8
+
+---
+name: Antônio Roberto
+email: forevertonny@gmail.com
+blog: http://devton.io/
+feed: http://medium.com/feed/@devton
+twitter: dev_ton
+date_joined: !!timestamp '2015-01-11 00:00:01'
+id: 9
