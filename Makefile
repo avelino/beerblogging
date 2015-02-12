@@ -20,7 +20,7 @@ clean-test:
 	rm -fr htmlcov/
 
 lint:
-	flake8 beerapp tests.py
+	flake8 beerapp tests.py --ignore=E402
 
 test:
 	python tests.py
