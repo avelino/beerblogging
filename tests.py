@@ -42,20 +42,5 @@ class AppFlaskTest(unittest.TestCase):
         self.assertEqual(TAGS(), set(_TAGS))
 
 
-class MembersTest(unittest.TestCase):
-    def setUp(self):
-        db.drop_all()
-        db.create_all()
-        members_str = open(app.config['MEMBERS_FILE']).read()
-        self.yaml = yaml.load_all(members_str)
-        self.all = map(Member, yaml.load_all(members_str))
-
-    def test_load_all_member(self):
-        for obj in self.all:
-            self.assertEqual(0, len(obj.post_id_list))
-            obj.fetch_entries()
-            self.assertTrue(len(obj.post_id_list) >= 1)
-
-
 if __name__ == '__main__':
     unittest.main()
