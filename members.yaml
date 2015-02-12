@@ -82,3 +82,12 @@ feed: http://medium.com/feed/@devton
 twitter: dev_ton
 date_joined: !!timestamp '2015-01-11 00:00:01'
 id: 9
+
+---
+name: Igor P. Leroy
+email: ip.leroy@gmail.com
+blog: http://lerrua.com/
+feed: http://www.lerrua.com/atom.xml
+twitter: lerrua
+date_joined: !!timestamp '2015-01-12 00:00:01'
+id: 10
