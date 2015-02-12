@@ -3,7 +3,6 @@ import yaml
 
 from beerapp.app import app, TAGS
 from beerapp.members import Member
-from beerapp import db
 
 
 class MembersYAMLTest(unittest.TestCase):
