@@ -57,13 +57,12 @@ def TAGS():
 @to_html('index.html')
 def index(tag=None):
     posts = BlogPost.latest_posts()
+    count = BlogPost.query
     if tag:
         posts = posts.filter(BlogPost.tags.like('%{0}%'.format(tag)))
-        count = BlogPost.filter(BlogPost.tags.like('%{0}%'.format(tag)))
-    else:
-        count = BlogPost.query
+        count = count.filter(BlogPost.tags.like('%{0}%'.format(tag)))
 
-    paginator.register('posts', getattr(count, "count"))
+    paginator.register('posts', count.count)
     pagination = paginator.for_posts
     latest_posts = posts.paginate(
         pagination.page, pagination.per_page).items
