@@ -59,8 +59,11 @@ def index(tag=None):
     posts = BlogPost.latest_posts()
     if tag:
         posts = posts.filter(BlogPost.tags.like('%{0}%'.format(tag)))
+        count = BlogPost.filter(BlogPost.tags.like('%{0}%'.format(tag)))
+    else:
+        count = BlogPost.query
 
-    paginator.register('posts', posts.count)
+    paginator.register('posts', getattr(count, "count"))
     pagination = paginator.for_posts
     latest_posts = posts.paginate(
         pagination.page, pagination.per_page).items
