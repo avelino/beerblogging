@@ -38,7 +38,6 @@ app.jinja_env.filters['br_month'] = br_month_filter
 
 from posts import BlogPost
 
-paginator.register('posts', BlogPost.query.count)
 
 from feed_generator import FeedGenerator
 
@@ -57,10 +56,12 @@ def TAGS():
 @app.route('/tag/<tag>/')
 @to_html('index.html')
 def index(tag=None):
-    pagination = paginator.for_posts
     posts = BlogPost.latest_posts()
     if tag:
         posts = posts.filter(BlogPost.tags.like('%{0}%'.format(tag)))
+
+    paginator.register('posts', posts.count)
+    pagination = paginator.for_posts
     latest_posts = posts.paginate(
         pagination.page, pagination.per_page).items
 
