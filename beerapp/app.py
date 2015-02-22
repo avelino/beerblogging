@@ -54,7 +54,7 @@ def TAGS():
 
 
 @app.route('/')
-@app.route('/tag/<tag>')
+@app.route('/tag/<tag>/')
 @to_html('index.html')
 def index(tag=None):
     pagination = paginator.for_posts
