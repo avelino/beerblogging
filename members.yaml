@@ -91,3 +91,14 @@ feed: http://www.lerrua.com/atom.xml
 twitter: lerrua
 date_joined: !!timestamp '2015-01-12 00:00:01'
 id: 10
+
+---
+name: Ayrton Araújo
+email: root@ayr-ton.net
+blog: http://blog.ayr-ton.net
+feed: http://feeds.feedburner.com/ayr-ton?format=xml
+twitter: ayrtonfreeman
+date_joined: !!timestamp '2015-02-23 00:00:01'
+tags: devops 
+id: 11
+
