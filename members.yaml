@@ -109,6 +109,6 @@ blog: http://caynanland.im
 feed: http://feeds.feedburner.com/caynan?format=xml
 twitter: caynanlandim
 date_joined: !!timestamp '2015-03-01 00:00:01'
-tags: python, development, tech student
+tags: python, development, tech-student
 id: 12
 
