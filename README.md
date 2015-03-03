@@ -12,15 +12,39 @@ You have 1 month to write at least 1 blogpost. If you don't do that, you have to
 
 ## Who are the BeerBloggers ?
 
-* Daniel Filho: [Blog](http://danielfilho.github.io) ~ [Feed](http://danielfilho.github.io/feed.xml)
-* Felipe Arruda: [Blog](http://arruda.blog.br/) ~ [Feed](http://www.arruda.blog.br/?feed=rss2)
-* Renato Mangini: [Blog](http://www.renatomangini.com/) ~ [Feed](http://www.renatomangini.com/feeds/posts/default)
-* Thiago Avelino: [Blog](http://avelino.us/) ~ [Feed](http://feeds.feedburner.com/pyavelino)
 * Zeno Rocha: [Blog](http://zenorocha.com/) ~ [Feed](http://feeds.feedburner.com/zenorocha)
+* Felipe Arruda: [Blog](http://arruda.blog.br/) ~ [Feed](http://www.arruda.blog.br/?feed=rss2)
+* Thiago Avelino: [Blog](http://avelino.us/) ~ [Feed](http://feeds.feedburner.com/pyavelino)
+* Renato Mangini: [Blog](http://www.renatomangini.com/) ~ [Feed](http://www.renatomangini.com/feeds/posts/default) 
+* Daniel Filho: [Blog](http://danielfilho.github.io) ~ [Feed](http://danielfilho.github.io/feed.xml)
 * Ellison Leão: [Blog](https://medium.com/@ellisonleao) ~ [Feed](https://medium.com/feed/@ellisonleao)
 * Eric Hideki:[Blog](http://ericstk.wordpress.com) ~ [Feed](https://ericstk.wordpress.com/feed/)
 * Mateus Ortiz: [Blog](http://mateusortiz.com) ~ [Feed](http://feeds.feedburner.com/mateusortiz)
+* Antônio Roberto: [Blog](http://devton.io/) ~ [Feed](http://medium.com/feed/@devton)
+* Igor Leroy: [Blog](http://lerrua.com/) ~ [Feed](http://www.lerrua.com/atom.xml)
 * Ayrton Araújo: [Blog](http://blog.ayr-ton.net) ~ [Feed](http://feeds.feedburner.com/ayr-ton)
+* Caynan Sousa: [Blog](http://blog.caynanland.im) ~ [Feed](http://blog.caynanland.im/feed.xml)
+
+## Joining the Bet
+
+1. You have to fork this project
+2. Add you data to the `members.yaml` following the model:
+  
+  ```YAML
+    ---
+    name: your name
+    email: youremail@domain.com
+    blog: http://yourbloglink.com
+    feed: http://yourblogfeed.com
+    twitter: yourusername
+    date_joined: !!timestamp 'Y-m-d H:M:s'
+    tags: your, blog, tags-without-space
+    id: memberAboveMe.id++
+  ```
+
+3. Edit the README.md, and add your blog URL and Feed.
+4. Send a Pull request.
+5. WRITE!
 
 ## Let's talk about code...
 
