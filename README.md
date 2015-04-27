@@ -24,6 +24,7 @@ You have 1 month to write at least 1 blogpost. If you don't do that, you have to
 * Igor Leroy: [Blog](http://lerrua.com/) ~ [Feed](http://www.lerrua.com/atom.xml)
 * Ayrton Araújo: [Blog](http://blog.ayr-ton.net) ~ [Feed](http://feeds.feedburner.com/ayr-ton)
 * Caynan Sousa: [Blog](http://blog.caynanland.im) ~ [Feed](http://blog.caynanland.im/feed.xml)
+* Nicholas Eduardo: [Blog](http:nicholasess.com.br)
 
 ## Joining the Bet
 
