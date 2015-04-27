@@ -112,3 +112,12 @@ date_joined: !!timestamp '2015-03-01 00:00:01'
 tags: python, development, tech-student
 id: 12
 
+---
+name: Nicholas Eduardo
+email: nicholasess@gmail.com
+blog: http://nicholasess.com.br
+feed: 
+twitter: nicholasess
+date_joined: !!timestamp '2015-04-26 00:00:01'
+tags: nodejs, angularjs, programming, startups
+id: 13
