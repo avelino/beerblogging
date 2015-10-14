@@ -25,7 +25,7 @@ You have 1 month to write at least 1 blogpost. If you don't do that, you have to
 * Ayrton Araújo: [Blog](http://blog.ayr-ton.net) ~ [Feed](http://feeds.feedburner.com/ayr-ton)
 * Caynan Sousa: [Blog](http://blog.caynanland.im) ~ [Feed](http://blog.caynanland.im/feed.xml)
 * Nicholas Eduardo: [Blog](http:nicholasess.com.br)
-* Gustavo Carvalho: [Blog](http://blog.gtsalles.com.br) ~ [Feed](http://blog.gtsalles.com.br/index.xml)
+* Gustavo Carvalho: [Blog](http://blog.gtsalles.com.br) ~ [Feed](http://blog.gtsalles.com.br/tags/beerblogging/index.xml)
 
 ## Joining the Bet
 
