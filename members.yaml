@@ -99,7 +99,7 @@ blog: http://blog.ayr-ton.net
 feed: http://feeds.feedburner.com/ayr-ton?format=xml
 twitter: ayrtonfreeman
 date_joined: !!timestamp '2015-02-23 00:00:01'
-tags: devops 
+tags: devops
 id: 11
 
 ---
@@ -116,7 +116,7 @@ id: 12
 name: Nicholas Eduardo
 email: nicholasess@gmail.com
 blog: http://nicholasess.com.br
-feed: 
+feed:
 twitter: nicholasess
 date_joined: !!timestamp '2015-04-26 00:00:01'
 tags: nodejs, angularjs, programming, startups
@@ -131,3 +131,13 @@ twitter: gt_salles
 date_joined: !!timestamp '2015-10-09 00:00:01'
 tags: python, django, programming, golang, docker
 id: 14
+
+---
+name: Jota Teles
+email: josetelesmaciel@gmail.com
+blog: http://jotateles.com.br
+feed: http://jotateles.com.br/feed.xml
+twitter: raiofront
+date_joined: !!timestamp '2016-02-26 00:00:01'
+tags: javascript, css, front-end, angularjs
+id: 15
